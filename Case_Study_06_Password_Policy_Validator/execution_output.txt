@@ -1,0 +1,55 @@
+﻿================================================================================
+        ENTERPRISE CYBERSECURITY - PASSWORD POLICY VALIDATION ENGINE
+================================================================================
+
+Analyzing Candidate: 'P@ssw0rd2026'
+  Score: 100/100 | Policy Status: STRONG / COMPLIANT
+  [✓] All enterprise complexity rules satisfied.
+
+Analyzing Candidate: 'SaiChandra#99'
+  Score: 100/100 | Policy Status: STRONG / COMPLIANT
+  [✓] All enterprise complexity rules satisfied.
+
+Analyzing Candidate: 'weak'
+  Score: 25/100 | Policy Status: REJECTED / WEAK
+  Identified Vulnerabilities:
+    [!] Too short (Length < 8 chars)
+    [!] Missing uppercase alphabet [A-Z]
+    [!] Missing numeric digit [0-9]
+    [!] Missing special character (!@#$%^&*...)
+
+Analyzing Candidate: 'NriitCollege2026!'
+  Score: 90/100 | Policy Status: MODERATE / NEEDS REFINEMENT
+  Identified Vulnerabilities:
+    [!] Contains prohibited dictionary substrings: nriit
+
+Analyzing Candidate: 'SecureCode#9999'
+  Score: 90/100 | Policy Status: MODERATE / NEEDS REFINEMENT
+  Identified Vulnerabilities:
+    [!] Contains 3+ consecutive identical characters (e.g. 'aaa')
+
+Analyzing Candidate: 'K@vya_Tech#2026'
+  Score: 100/100 | Policy Status: STRONG / COMPLIANT
+  [✓] All enterprise complexity rules satisfied.
+
+Analyzing Candidate: '123456789'
+  Score: 30/100 | Policy Status: REJECTED / WEAK
+  Identified Vulnerabilities:
+    [!] Missing uppercase alphabet [A-Z]
+    [!] Missing lowercase alphabet [a-z]
+    [!] Missing special character (!@#$%^&*...)
+    [!] Contains prohibited dictionary substrings: 123456
+
+================================================================================
+                     EVALUATION SUMMARY TABLE
+================================================================================
+Password Tested           Score    Violations   Verdict
+--------------------------------------------------------------------------------
+P@ssw0rd2026              100      0            STRONG / COMPLIANT
+SaiChandra#99             100      0            STRONG / COMPLIANT
+weak                      25       4            REJECTED / WEAK
+NriitCollege2026!         90       1            MODERATE / NEEDS REFINEMENT
+SecureCode#9999           90       1            MODERATE / NEEDS REFINEMENT
+K@vya_Tech#2026           100      0            STRONG / COMPLIANT
+123456789                 30       4            REJECTED / WEAK
+================================================================================
