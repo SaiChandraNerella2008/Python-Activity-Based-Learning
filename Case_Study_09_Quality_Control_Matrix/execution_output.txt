@@ -1,0 +1,31 @@
+﻿===============================================================================================
+        PRECISION AUTOMOTIVE MANUFACTURING - QUALITY CONTROL MATRIX
+        Standard Defect Tolerance Threshold: 3.50%
+===============================================================================================
+BatchID   Product Line       Produced   Passed    Defective   Defect(%)   Yield(%)   Status
+-----------------------------------------------------------------------------------------------
+BAT-101   Brake Rotors       5000       4955      45          0.90        99.10      GRADE-A (PASS)
+BAT-102   Alloy Wheels       2500       2415      85          3.40        96.60      GRADE-B (ACCEPTABLE)
+BAT-103   Fuel Injectors     8000       7640      360         4.50        95.50      QUARANTINED (FAIL)
+BAT-104   Spark Plugs        12000      11890     110         0.92        99.08      GRADE-A (PASS)
+BAT-105   Transmission Gears 3500       3340      160         4.57        95.43      QUARANTINED (FAIL)
+BAT-106   Camshaft Assemblies 1800       1765      35          1.94        98.06      GRADE-B (ACCEPTABLE)
+BAT-107   Turbocharger Blades 4000       3925      75          1.88        98.12      GRADE-B (ACCEPTABLE)
+-----------------------------------------------------------------------------------------------
+                           QUALITY AUDIT SUMMARY
+-----------------------------------------------------------------------------------------------
+Total Batches Inspected      : 7
+Total Components Manufactured : 36,800
+Total Passed Components       : 35,930
+Total Defective / Scrap Units : 870
+Overall Factory Defect Rate   : 2.36%
+Overall Factory Yield Rate    : 97.64%
+
+===============================================================================================
+                     FLAGGED BATCHES REQUIRING REWORK
+===============================================================================================
+BatchID    Product Line           Defect Rate    Defective Units  Mandatory Action
+-----------------------------------------------------------------------------------------------
+BAT-103    Fuel Injectors         4.50          % 360              Immediate Line Stoppage & Root Cause Analysis
+BAT-105    Transmission Gears     4.57          % 160              Immediate Line Stoppage & Root Cause Analysis
+===============================================================================================
