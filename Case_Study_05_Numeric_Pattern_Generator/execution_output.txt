@@ -1,0 +1,36 @@
+﻿=================================================================
+       ADVANCED MATHEMATICAL NUMERIC PATTERN GENERATION SUITE
+=================================================================
+
+--- [Pattern A] Symmetric Palindromic Number Pyramid (Height: 5) ---
+        1 
+      1 2 1 
+    1 2 3 2 1 
+  1 2 3 4 3 2 1 
+1 2 3 4 5 4 3 2 1 
+
+--- [Pattern B] Advanced Hollow Numeric Diamond (Dimension: 7) ---
+      1
+    2   2
+  3       3
+4           4
+  3       3
+    2   2
+      1
+
+--- [Pattern C] Formatted Right-Angled Number Grid (Rows: 6) ---
+   1
+   2   3
+   4   5   6
+   7   8   9  10
+  11  12  13  14  15
+  16  17  18  19  20  21
+
+--- [Validation Tests for Boundary & Invalid Inputs] ---
+
+--- [Pattern B] Advanced Hollow Numeric Diamond (Dimension: 6) ---
+Error: Dimension must be an odd integer >= 3 to generate a symmetric diamond.
+
+--- [Pattern A] Symmetric Palindromic Number Pyramid (Height: 12) ---
+Error: Dimension must be an integer between 1 and 9 for single-digit alignment.
+=================================================================
