@@ -1,0 +1,31 @@
+﻿===============================================================================================
+          HOSPITAL / INDUSTRY EMPLOYEE SHIFT CONFLICT & OVERLAP AUDITOR
+===============================================================================================
+ShiftID   EmpID    Employee Name      Role/Dept      Day        Start   End     Duration
+-----------------------------------------------------------------------------------------------
+SH01      EMP101   Dr. Arvind Rao     Emergency ICU  Monday     08:00   16:00   8.0 hrs
+SH02      EMP102   Nurse Priya Nair   Pediatrics     Monday     09:00   17:00   8.0 hrs
+SH03      EMP101   Dr. Arvind Rao     Outpatient OPD Monday     14:00   20:00   6.0 hrs
+SH04      EMP103   Tech. Sumanth V    Radiology      Monday     08:00   14:00   6.0 hrs
+SH05      EMP103   Tech. Sumanth V    CT Scan Unit   Monday     16:00   22:00   6.0 hrs
+SH06      EMP104   Dr. Shalini Roy    Cardiology     Monday     10:00   18:00   8.0 hrs
+SH07      EMP102   Nurse Priya Nair   Night Triage   Tuesday    20:00   04:00   -16.0 hrs
+-----------------------------------------------------------------------------------------------
+                         DETECTED SCHEDULE CONFLICTS
+-----------------------------------------------------------------------------------------------
+[!] DIRECT OVERLAP DETECTED for Dr. Arvind Rao (EMP101) on Monday:
+    Shift 1: SH01 (08:00 - 16:00) in Emergency ICU
+    Shift 2: SH03 (14:00 - 20:00) in Outpatient OPD
+    Overlap Period: 14:00 to 16:00 (120 minutes clash)
+
+[!] INSUFFICIENT REST PERIOD (< 8 hrs) for Tech. Sumanth V (EMP103) on Monday:
+    Shift SH04 ends at 14:00; Shift SH05 starts at 16:00 (Gap: 2.0 hrs)
+
+-----------------------------------------------------------------------------------------------
+                            AUDIT SUMMARY
+-----------------------------------------------------------------------------------------------
+Total Scheduled Shifts Analyzed : 7
+Total Conflict Violations Found : 2
+Employees Requiring Rescheduling: 2 -> Dr. Arvind Rao, Tech. Sumanth V
+[!] ACTION REQUIRED: Resolve flagged shifts before finalizing the operational roster.
+===============================================================================================
