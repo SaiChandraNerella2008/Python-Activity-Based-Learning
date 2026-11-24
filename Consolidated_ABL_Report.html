@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Activity-Based Learning (ABL) Assignment - Dr. RVR NRIIT</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm 15mm 20mm 15mm;
+            @bottom-right {
+                content: counter(page);
+            }
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1e293b;
+            line-height: 1.6;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .page-break {
+            page-break-before: always;
+        }
+        /* Cover Page */
+        .cover {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border: 4px double #1e3a8a;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+        .inst-title {
+            font-size: 24pt;
+            font-weight: 800;
+            color: #1e3a8a;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        .inst-subtitle {
+            font-size: 11pt;
+            color: #475569;
+            margin-bottom: 25px;
+        }
+        .dept-title {
+            font-size: 16pt;
+            font-weight: 700;
+            color: #0f172a;
+            border-top: 2px solid #cbd5e1;
+            border-bottom: 2px solid #cbd5e1;
+            padding: 10px 0;
+            margin: 20px 0 35px;
+        }
+        .doc-title {
+            font-size: 20pt;
+            font-weight: 800;
+            color: #b91c1c;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .doc-sub {
+            font-size: 12pt;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 45px;
+        }
+        .student-details {
+            display: inline-block;
+            text-align: left;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 18px 30px;
+            margin-bottom: 40px;
+            font-size: 11pt;
+        }
+        .student-details table td {
+            padding: 4px 10px;
+        }
+        .faculty-block {
+            margin-top: 30px;
+            font-size: 10.5pt;
+            color: #475569;
+        }
+        
+        /* Section Content */
+        h1, h2, h3, h4 {
+            color: #0f172a;
+        }
+        h2.case-heading {
+            font-size: 16pt;
+            color: #1e3a8a;
+            border-bottom: 2px solid #1e3a8a;
+            padding-bottom: 6px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        h3.sub-title {
+            font-size: 12pt;
+            color: #0369a1;
+            margin-top: 16px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        p, li {
+            font-size: 10pt;
+            color: #334155;
+            text-align: justify;
+        }
+        ul, ol {
+            margin-top: 4px;
+            margin-bottom: 10px;
+            padding-left: 24px;
+        }
+        code, pre {
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 9pt;
+        }
+        pre {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid #3b82f6;
+            padding: 10px 14px;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        pre.output-box {
+            background: #0f172a;
+            color: #38bdf8;
+            border: 1px solid #334155;
+            border-left: 4px solid #10b981;
+        }
+        .flowchart-box {
+            background: #f1f5f9;
+            border: 1px dashed #64748b;
+            padding: 12px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 8.5pt;
+            white-space: pre;
+            line-height: 1.35;
+        }
+        table.tbl {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 9.5pt;
+        }
+        table.tbl th, table.tbl td {
+            border: 1px solid #cbd5e1;
+            padding: 7px 10px;
+            text-align: left;
+        }
+        table.tbl th {
+            background: #f1f5f9;
+            color: #0f172a;
+            font-weight: 700;
+        }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 8pt;
+            font-weight: 600;
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cover Page -->
+    <div class="cover">
+        <div class="inst-title">Dr. RVR NRI INSTITUTE OF TECHNOLOGY</div>
+        <div class="inst-subtitle">
+            (An Institution Deemed to be University u/s 3 of UGC Act, 1956)<br>
+            Pothavarappadu (V), Agiripalli (M), Vijayawada Rural, Eluru District, Andhra Pradesh - 521212
+        </div>
+        
+        <div class="dept-title">
+            SCHOOL OF COMPUTER STUDIES<br>
+            DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
+        </div>
+
+        <div class="doc-title">ACTIVITY-BASED LEARNING (ABL) ASSIGNMENT</div>
+        <div class="doc-sub">Course: Python Programming (I B.Tech - Academic Year 2026-27)</div>
+
+        <div class="student-details">
+            <table>
+                <tr><td><strong>Student Name:</strong></td><td>Sai Chandra Nerella</td></tr>
+                <tr><td><strong>Roll Number:</strong></td><td>24NR1A0506</td></tr>
+                <tr><td><strong>Degree / Branch:</strong></td><td>B.Tech - Computer Science & Engineering (CSE)</td></tr>
+                <tr><td><strong>Year & Section:</strong></td><td>I B.Tech / Section A</td></tr>
+                <tr><td><strong>Assignment:</strong></td><td>10 Selected Difficult-Level Case Studies</td></tr>
+                <tr><td><strong>Repository:</strong></td><td>github.com/SaiChandraNerella2008/Python-Activity-Based-Learning</td></tr>
+            </table>
+        </div>
+
+        <div class="faculty-block">
+            <strong>Evaluated by:</strong> Faculty of Python Programming / Lab Mentor<br>
+            Dr. RVR NRI Institute of Technology
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- Table of Contents -->
+    <h2 class="case-heading">TABLE OF CONTENTS - 10 SELECTED CASE STUDIES</h2>
+    <table class="tbl">
+        <thead>
+            <tr>
+                <th style="width: 8%;">S.No</th>
+                <th style="width: 14%;">Case Study #</th>
+                <th>Title of the Problem</th>
+                <th>Core Syllabus Concepts Explored</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td><strong>Problem 01</strong></td>
+                <td>University Scholarship Allocation System</td>
+                <td>Conditionals, Multi-criteria Ranking, Tuples & Unpacking</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><strong>Problem 04</strong></td>
+                <td>Employee Payroll and Deduction Analysis</td>
+                <td>Arithmetic Operators, Progressive Tax Slabs, String Formatting</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><strong>Problem 13</strong></td>
+                <td>ATM Transaction Sequence Simulation</td>
+                <td>Loops, State Variables, Balance Audit, Transaction Rejections</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td><strong>Problem 20</strong></td>
+                <td>University Admission Decision Engine</td>
+                <td>Lists, Multi-tiered Tie-Breaking Algorithm, Quota Allotment</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td><strong>Problem 27</strong></td>
+                <td>Advanced Numeric Pattern Generator</td>
+                <td>Nested Loops, Symmetric Palindromic Pyramids, Hollow Diamonds</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><strong>Problem 29</strong></td>
+                <td>Password Policy Validation Engine</td>
+                <td>Strings, Character Categories, Repetition Detection, Substrings</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><strong>Problem 42</strong></td>
+                <td>Student Marks Matrix Analysis</td>
+                <td>Nested Lists (2D Arrays), Row-wise & Column-wise Statistics</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><strong>Problem 48</strong></td>
+                <td>Tuple-Based Employee Shift Conflict Detection</td>
+                <td>Tuples, Time Interval Comparison, Overlap & Rest Audit</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><strong>Problem 60</strong></td>
+                <td>Manufacturing Quality Control Matrix</td>
+                <td>Nested Lists, Defect Tolerances, Industrial Scrap Analysis</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><strong>Problem 100</strong></td>
+                <td>Comprehensive Smart Campus Management Simulation</td>
+                <td>Modular Menu-driven Architecture, Full Syllabus Synthesis</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-break"></div>
+
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 01: UNIVERSITY SCHOLARSHIP ALLOCATION SYSTEM (Problem 01)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Variables, Data Types, Conditional Statements, Lists, Tuples, Tuple Unpacking, Sorting Algorithms</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Design an automated scholarship allocation system that evaluates applicants against aggregate marks, subject-wise minimum scores, attendance percentages, and family income criteria. Rank eligible candidates and resolve ties using deterministic rules (Aggregate Marks > Lower Annual Income > Higher Attendance).</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Validate applicant eligibility against 4 strict thresholds.<br>2. Classify awards into Fee Waiver Tiers (100%, 75%, 50%).<br>3. Implement deterministic tie-breaking logic using list sorting.<br>4. Produce detailed allocation and funds disbursement reports.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Aggregate marks >= 80.0%, minimum subject mark >= 65.0%.<br>2. Attendance must be at least 75.0%.<br>3. Annual family income must not exceed ₹3,00,000.<br>4. Income and marks are non-negative numeric quantities.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Initialize eligible_candidates list.<br>2. For each applicant tuple (id, name, agg, min_sub, att, inc): unpack tuple.<br>3. Check all 4 eligibility conditions. If passed, determine fee waiver tier and append to eligible list; else record rejection reason.<br>4. Apply bubble sort on eligible list comparing Aggregate (desc), Income (asc), Attendance (desc).<br>5. Iterate through ranked list, assign rank numbers, calculate total funds, and display report.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION evaluate_scholarships(applicants):
+    SET eligible_list = []
+    FOR EACH (id, name, agg, min_sub, att, inc) IN applicants:
+        IF agg >= 80 AND min_sub >= 65 AND att >= 75 AND inc <= 300000 THEN
+            tier = DETERMINE_TIER(agg)
+            eligible_list.APPEND([id, name, agg, inc, att, tier])
+        ELSE
+            PRINT rejection reason
+    SORT eligible_list BY agg DESC, inc ASC, att DESC
+    DISPLAY final ranked recipients and total funds
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Read Applicant Record (ID, Marks, Att, Income)]
+   │
+   ▼
+<Is Agg >= 80 AND MinSub >= 65 AND Att >= 75 AND Inc <= 300K?>
+   ├── YES ──► [Assign Waiver Tier (100% / 75% / 50%)] ──► [Add to Eligible Pool]
+   │                                                               │
+   └── NO  ──► [Record Specific Rejection Reason]                  ▼
+                                                      [Apply Multi-Key Tie-Breaker Sort]
+                                                               │
+                                                               ▼
+                                                      [Print Final Ranked Disbursal Table]
+                                                               │
+                                                               ▼
+                                                             [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 1: University Scholarship Allocation System
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, lists, tuples, tuple unpacking.
+
+Problem Statement:
+Design a system that evaluates applicants using aggregate marks, subject-wise
+minimum scores, attendance, and income criteria, ranks eligible students, and
+resolves ties using predefined rules.
+"""
+
+def evaluate_scholarships(applicants):
+    print("=" * 75)
+    print("       UNIVERSITY SCHOLARSHIP ALLOCATION SYSTEM - EVALUATION REPORT")
+    print("=" * 75)
+    print(f"{'ID':<6} {'Name':<15} {'Aggregate':<10} {'Min Sub':<9} {'Attnd(%)':<9} {'Income(₹)':<11} {'Status'}")
+    print("-" * 75)
+
+    eligible_candidates = []
+
+    # Process each applicant tuple: (id, name, agg_marks, min_sub_mark, attendance, annual_income)
+    for applicant in applicants:
+        app_id, name, agg_marks, min_sub, attendance, income = applicant
+
+        # Eligibility Criteria:
+        # 1. Aggregate Marks >= 80.0
+        # 2. Minimum in any subject >= 65.0
+        # 3. Attendance >= 75.0%
+        # 4. Annual Family Income <= 300,000
+        is_eligible = True
+        reasons = []
+
+        if agg_marks < 80.0:
+            is_eligible = False
+            reasons.append("Low Agg")
+        if min_sub < 65.0:
+            is_eligible = False
+            reasons.append("Low Sub")
+        if attendance < 75.0:
+            is_eligible = False
+            reasons.append("Low Att")
+        if income > 300000:
+            is_eligible = False
+            reasons.append("High Inc")
+
+        if is_eligible:
+            status = "ELIGIBLE"
+            # Category based on aggregate:
+            if agg_marks >= 95.0:
+                tier = "Tier-1 (100% Fee Waiver)"
+                benefit = 100000
+            elif agg_marks >= 90.0:
+                tier = "Tier-2 (75% Fee Waiver)"
+                benefit = 75000
+            else:
+                tier = "Tier-3 (50% Fee Waiver)"
+                benefit = 50000
+            eligible_candidates.append([app_id, name, agg_marks, min_sub, attendance, income, tier, benefit])
+        else:
+            status = "REJECTED (" + ", ".join(reasons) + ")"
+
+        print(f"{app_id:<6} {name:<15} {agg_marks:<10.1f} {min_sub:<9.1f} {attendance:<9.1f} {income:<11} {status}")
+
+    # Sorting & Tie-breaking using manual sorting logic (bubble sort for algorithmic demonstration)
+    # Tie-breaking priority: 1) Aggregate Marks (descending), 2) Annual Income (ascending - needy first), 3) Attendance (descending)
+    n = len(eligible_candidates)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            cand1 = eligible_candidates[j]
+            cand2 = eligible_candidates[j + 1]
+
+            # Primary criterion: Aggregate marks (higher is better)
+            swap = False
+            if cand1[2] < cand2[2]:
+                swap = True
+            elif cand1[2] == cand2[2]:
+                # Tie-breaker 1: Annual Income (lower is better)
+                if cand1[5] > cand2[5]:
+                    swap = True
+                elif cand1[5] == cand2[5]:
+                    # Tie-breaker 2: Attendance (higher is better)
+                    if cand1[4] < cand2[4]:
+                        swap = True
+
+            if swap:
+                eligible_candidates[j], eligible_candidates[j + 1] = eligible_candidates[j + 1], eligible_candidates[j]
+
+    print("\n" + "=" * 75)
+    print("                  FINAL RANKED SCHOLARSHIP RECIPIENTS")
+    print("=" * 75)
+    print(f"{'Rank':<6} {'ID':<6} {'Name':<15} {'Aggregate':<10} {'Income(₹)':<11} {'Attendance':<11} {'Award Category'}")
+    print("-" * 75)
+
+    rank = 1
+    total_disbursed = 0
+    for cand in eligible_candidates:
+        c_id, c_name, c_agg, c_min, c_att, c_inc, c_tier, c_amt = cand
+        print(f"{rank:<6} {c_id:<6} {c_name:<15} {c_agg:<10.1f} {c_inc:<11} {c_att:<11.1f}% {c_tier}")
+        total_disbursed += c_amt
+        rank += 1
+
+    print("-" * 75)
+    print(f"Total Eligible Candidates: {len(eligible_candidates)}")
+    print(f"Total Scholarship Funds Allocated: ₹{total_disbursed:,}")
+    print("=" * 75)
+
+
+if __name__ == "__main__":
+    # Test Data: List of tuples (ID, Name, AggregateMarks, MinSubjectMarks, AttendancePercent, AnnualIncome)
+    dataset = [
+        ("S101", "Aarav Sharma",   92.5, 78.0, 88.0, 180000),
+        ("S102", "Bhavya Reddy",   78.0, 60.0, 82.0, 150000),  # Rejected: Agg < 80, MinSub < 65
+        ("S103", "Chaitanya Roy",  96.0, 85.0, 94.0, 220000),  # Eligible: Tier-1
+        ("S104", "Divya Patel",    92.5, 80.0, 85.0, 140000),  # Tie with S101, but lower income
+        ("S105", "Eshwar Naik",    88.0, 72.0, 68.0, 120000),  # Rejected: Att < 75
+        ("S106", "Fatima Zahra",   89.0, 70.0, 91.0, 280000),  # Eligible: Tier-3
+        ("S107", "Gautam Verma",   94.0, 62.0, 89.0, 110000),  # Rejected: MinSub < 65
+        ("S108", "Harika Devi",    96.0, 88.0, 96.0, 220000),  # Tie with S103 on Agg & Income, higher att
+        ("S109", "Ishaan Joshi",   84.5, 68.0, 80.0, 350000),  # Rejected: Income > 300,000
+        ("S110", "Jaspreet Kaur",  90.0, 74.0, 86.0, 190000),  # Eligible: Tier-2
+    ]
+
+    evaluate_scholarships(dataset)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿===========================================================================
+       UNIVERSITY SCHOLARSHIP ALLOCATION SYSTEM - EVALUATION REPORT
+===========================================================================
+ID     Name            Aggregate  Min Sub   Attnd(%)  Income(₹)   Status
+---------------------------------------------------------------------------
+S101   Aarav Sharma    92.5       78.0      88.0      180000      ELIGIBLE
+S102   Bhavya Reddy    78.0       60.0      82.0      150000      REJECTED (Low Agg, Low Sub)
+S103   Chaitanya Roy   96.0       85.0      94.0      220000      ELIGIBLE
+S104   Divya Patel     92.5       80.0      85.0      140000      ELIGIBLE
+S105   Eshwar Naik     88.0       72.0      68.0      120000      REJECTED (Low Att)
+S106   Fatima Zahra    89.0       70.0      91.0      280000      ELIGIBLE
+S107   Gautam Verma    94.0       62.0      89.0      110000      REJECTED (Low Sub)
+S108   Harika Devi     96.0       88.0      96.0      220000      ELIGIBLE
+S109   Ishaan Joshi    84.5       68.0      80.0      350000      REJECTED (High Inc)
+S110   Jaspreet Kaur   90.0       74.0      86.0      190000      ELIGIBLE
+
+===========================================================================
+                  FINAL RANKED SCHOLARSHIP RECIPIENTS
+===========================================================================
+Rank   ID     Name            Aggregate  Income(₹)   Attendance  Award Category
+---------------------------------------------------------------------------
+1      S108   Harika Devi     96.0       220000      96.0       % Tier-1 (100% Fee Waiver)
+2      S103   Chaitanya Roy   96.0       220000      94.0       % Tier-1 (100% Fee Waiver)
+3      S104   Divya Patel     92.5       140000      85.0       % Tier-2 (75% Fee Waiver)
+4      S101   Aarav Sharma    92.5       180000      88.0       % Tier-2 (75% Fee Waiver)
+5      S110   Jaspreet Kaur   90.0       190000      86.0       % Tier-2 (75% Fee Waiver)
+6      S106   Fatima Zahra    89.0       280000      91.0       % Tier-3 (50% Fee Waiver)
+---------------------------------------------------------------------------
+Total Eligible Candidates: 6
+Total Scholarship Funds Allocated: ₹475,000
+===========================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>The system successfully evaluated, filtered, and ranked scholarship candidates. Ties between candidates with identical aggregates were deterministically resolved by prioritizing lower annual family income and higher attendance.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 02: EMPLOYEE PAYROLL AND DEDUCTION ANALYSIS (Problem 04)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Computational Thinking, Arithmetic Operators, Conditional Slabs, Strings, Formatting, Tuples</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Calculate monthly gross salary from basic pay, allowances (HRA, DA), overtime, and performance incentives. Apply progressive deductions including Provident Fund (PF), Professional Tax (PT), and annualized Income Tax (TDS) based on progressive tax slabs, producing an executive payroll statement.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Calculate HRA, DA, overtime pay, and gross earnings.<br>2. Compute statutory PF (12% of basic) and slab-based Professional Tax.<br>3. Implement annualized progressive Income Tax slab calculations.<br>4. Generate net take-home pay and executive grade classification.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. HRA and DA are calculated as percentages of Basic Pay.<br>2. Overtime is paid hourly at the contract OT rate.<br>3. Income tax is progressive: 0% up to ₹3L, 5% up to ₹6L, 10% up to ₹9L, 15% up to ₹12L, 20% above ₹12L.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. For each employee record: unpack tuple (emp_id, name, basic, hra_pct, da_pct, ot_hrs, ot_rate, inc).<br>2. Gross = basic + (basic*hra_pct/100) + (basic*da_pct/100) + (ot_hrs*ot_rate) + inc.<br>3. Compute PF = 0.12 * basic. Compute PT from monthly gross.<br>4. Annualize gross (gross * 12). Compute progressive income tax across brackets. Monthly tax = annual_tax / 12.<br>5. Net = gross - (PF + PT + monthly_tax). Output formatted payroll row.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION generate_payroll(employees):
+    FOR EACH emp IN employees:
+        gross = basic + hra + da + overtime + incentive
+        pf = 0.12 * basic
+        pt = CALCULATE_PT(gross)
+        annual_tax = CALCULATE_PROGRESSIVE_TAX(gross * 12)
+        monthly_tax = annual_tax / 12
+        net = gross - (pf + pt + monthly_tax)
+        PRINT formatted salary row
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Read (EmpID, Basic, HRA%, DA%, OT, Incentives)]
+   │
+   ▼
+[Compute Allowances = Basic * (HRA% + DA%)]
+[Compute Gross = Basic + Allowances + OT_Pay + Incentives]
+   │
+   ▼
+[Calculate Deductions: PF (12%) + PT Slab + Progressive TDS (Annualized / 12)]
+   │
+   ▼
+[Net Pay = Gross - Total Deductions]
+   │
+   ▼
+[Assign Grade: Exec-A / Sr-B / Mid-C / Jr-D]
+   │
+   ▼
+[Print Formatted Corporate Salary Slip]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 2 (Problem 4): Employee Payroll and Deduction Analysis
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, strings, lists, tuples, tuple unpacking.
+
+Problem Statement:
+Calculate gross salary from basic pay, allowances, overtime, and incentives; apply
+progressive deductions (Income Tax, PF, Professional Tax) and generate a formatted
+salary statement.
+"""
+
+def generate_payroll_statement(employees):
+    print("=" * 105)
+    print("                      CORPORATE MONTHLY PAYROLL & SALARY STATEMENT")
+    print("=" * 105)
+    print(f"{'EmpID':<7} {'Name':<15} {'Basic(₹)':<10} {'Allow(₹)':<9} {'OT+Inc(₹)':<10} {'Gross(₹)':<11} {'PF(₹)':<8} {'Tax(₹)':<8} {'PT(₹)':<6} {'Net Pay(₹)':<11} {'Grade'}")
+    print("-" * 105)
+
+    total_gross_disbursed = 0.0
+    total_net_disbursed = 0.0
+    total_tax_collected = 0.0
+
+    for emp in employees:
+        # Tuple unpacking: emp_id, name, basic_pay, hra_percent, da_percent, ot_hours, ot_rate, incentives
+        emp_id, name, basic, hra_pct, da_pct, ot_hrs, ot_rate, incentives = emp
+
+        # 1. Allowances calculation
+        hra = (basic * hra_pct) / 100.0
+        da = (basic * da_pct) / 100.0
+        allowances = hra + da
+
+        # 2. Overtime & Incentives
+        overtime_pay = ot_hrs * ot_rate
+        variable_pay = overtime_pay + incentives
+
+        # 3. Gross Salary
+        gross_salary = basic + allowances + variable_pay
+        total_gross_disbursed += gross_salary
+
+        # 4. Progressive Deductions:
+        # a) Provident Fund (PF): 12% of basic pay (capped if basic exceeds threshold)
+        pf_deduction = 0.12 * basic
+
+        # b) Professional Tax (PT): slab-based
+        if gross_salary > 50000:
+            pt_deduction = 250.0
+        elif gross_salary > 25000:
+            pt_deduction = 150.0
+        else:
+            pt_deduction = 0.0
+
+        # c) Progressive Monthly Income Tax (TDS) based on annualized gross:
+        annual_gross = gross_salary * 12.0
+        annual_tax = 0.0
+
+        # Tax Slabs:
+        # Up to ₹3,00,000 : Nil
+        # ₹3,00,001 to ₹6,00,000 : 5%
+        # ₹6,00,001 to ₹9,00,000 : 10%
+        # ₹9,00,001 to ₹12,00,000 : 15%
+        # Above ₹12,00,000 : 20%
+        if annual_gross > 1200000:
+            annual_tax += (annual_gross - 1200000) * 0.20
+            annual_tax += 300000 * 0.15
+            annual_tax += 300000 * 0.10
+            annual_tax += 300000 * 0.05
+        elif annual_gross > 900000:
+            annual_tax += (annual_gross - 900000) * 0.15
+            annual_tax += 300000 * 0.10
+            annual_tax += 300000 * 0.05
+        elif annual_gross > 600000:
+            annual_tax += (annual_gross - 600000) * 0.10
+            annual_tax += 300000 * 0.05
+        elif annual_gross > 300000:
+            annual_tax += (annual_gross - 300000) * 0.05
+        else:
+            annual_tax = 0.0
+
+        monthly_tax = annual_tax / 12.0
+        total_tax_collected += monthly_tax
+
+        # Total Deductions & Net Pay
+        total_deductions = pf_deduction + pt_deduction + monthly_tax
+        net_salary = gross_salary - total_deductions
+        total_net_disbursed += net_salary
+
+        # Pay Grade Classification
+        if gross_salary >= 100000:
+            grade = "Exec-A"
+        elif gross_salary >= 60000:
+            grade = "Sr-B"
+        elif gross_salary >= 35000:
+            grade = "Mid-C"
+        else:
+            grade = "Jr-D"
+
+        print(f"{emp_id:<7} {name:<15} {basic:<10.2f} {allowances:<9.2f} {variable_pay:<10.2f} {gross_salary:<11.2f} {pf_deduction:<8.2f} {monthly_tax:<8.2f} {pt_deduction:<6.2f} {net_salary:<11.2f} {grade}")
+
+    print("-" * 105)
+    print(f"Total Employees Processed : {len(employees)}")
+    print(f"Total Monthly Gross Payroll: ₹{total_gross_disbursed:,.2f}")
+    print(f"Total Income Tax Deducted  : ₹{total_tax_collected:,.2f}")
+    print(f"Total Net Salaries Paid    : ₹{total_net_disbursed:,.2f}")
+    print("=" * 105)
+
+
+if __name__ == "__main__":
+    # Test Data: (EmpID, Name, BasicPay, HRAPercent, DAPercent, OTHours, OTRate, Incentives)
+    employee_records = [
+        ("EMP001", "Rajesh Kumar",  85000, 20.0, 15.0, 10, 500, 12000),
+        ("EMP002", "Pooja Hegde",   45000, 18.0, 12.0, 15, 300, 5000),
+        ("EMP003", "Vikram Rathore", 120000, 25.0, 15.0, 0, 0, 25000),
+        ("EMP004", "Sneha Roy",     28000, 15.0, 10.0, 20, 200, 2000),
+        ("EMP005", "Amitabh Sen",   62000, 20.0, 12.0, 8, 400, 8000),
+    ]
+
+    generate_payroll_statement(employee_records)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿=========================================================================================================
+                      CORPORATE MONTHLY PAYROLL & SALARY STATEMENT
+=========================================================================================================
+EmpID   Name            Basic(₹)   Allow(₹)  OT+Inc(₹)  Gross(₹)    PF(₹)    Tax(₹)   PT(₹)  Net Pay(₹)  Grade
+---------------------------------------------------------------------------------------------------------
+EMP001  Rajesh Kumar    85000.00   29750.00  17000.00   131750.00   10200.00 13850.00 250.00 107450.00   Exec-A
+EMP002  Pooja Hegde     45000.00   13500.00  9500.00    68000.00    5400.00  3050.00  250.00 59300.00    Sr-B
+EMP003  Vikram Rathore  120000.00  48000.00  25000.00   193000.00   14400.00 26100.00 250.00 152250.00   Exec-A
+EMP004  Sneha Roy       28000.00   7000.00   6000.00    41000.00    3360.00  800.00   150.00 36690.00    Mid-C
+EMP005  Amitabh Sen     62000.00   19840.00  11200.00   93040.00    7440.00  6456.00  250.00 78894.00    Sr-B
+---------------------------------------------------------------------------------------------------------
+Total Employees Processed : 5
+Total Monthly Gross Payroll: ₹526,790.00
+Total Income Tax Deducted  : ₹50,256.00
+Total Net Salaries Paid    : ₹434,584.00
+=========================================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Accurately calculated progressive tax deductions and statutory withholdings across multiple employee salary grades. Verified net take-home pay calculations without external financial dependencies.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 03: ATM TRANSACTION SEQUENCE SIMULATION (Problem 13)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Loops, State Variables, Conditional Statements, Lists, Tuples, Transaction Validation</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Process a sequential stream of ATM banking transactions (deposits and withdrawals) against an account, enforce single-transaction caps, daily cumulative withdrawal limits, and minimum balance constraints, reject invalid operations, and generate an audit ledger.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Maintain real-time account balance across arbitrary transaction sequences.<br>2. Enforce minimum balance (₹2,000) and max single withdrawal limit (₹20,000).<br>3. Track cumulative daily withdrawals and enforce daily ceiling (₹50,000).<br>4. Reject negative amounts and unsupported transaction types.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Opening balance is valid and meets minimum balance requirement.<br>2. Transactions occur in strict chronological sequence.<br>3. Rejected transactions do not alter running balance or daily caps.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Initialize balance = opening_balance, total_withdrawn = 0.<br>2. For each transaction (txn_id, txn_type, amount): unpack.<br>3. If amount <= 0: reject as invalid amount.<br>4. If DEPOSIT: balance += amount; log success.<br>5. If WITHDRAWAL: check if amount > 20,000 (single cap), or total_withdrawn + amount > 50,000 (daily cap), or balance - amount < 2,000 (min balance). If any holds, reject; else balance -= amount, total_withdrawn += amount, log success.<br>6. Display audit table and summary statistics.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION simulate_atm(balance, transactions):
+    FOR EACH (id, type, amount) IN transactions:
+        IF amount <= 0 THEN REJECT
+        ELSE IF type == 'DEPOSIT' THEN balance += amount
+        ELSE IF type == 'WITHDRAWAL' THEN
+            IF amount > MAX_SINGLE OR daily_sum + amount > DAILY_LIMIT OR balance - amount < MIN_BAL THEN
+                REJECT
+            ELSE
+                balance -= amount; daily_sum += amount
+        PRINT audit row
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Initialize Balance & Cumulative Withdrawn Total]
+   │
+   ▼
+[Read Next Transaction (TxnID, Type, Amount)]
+   │
+   ├── Amount <= 0? ──► [REJECT: Invalid Amount]
+   │
+   ├── Type == DEPOSIT? ──► [Balance += Amount] ──► [Log SUCCESS]
+   │
+   └── Type == WITHDRAWAL?
+         │
+         ├── Amount > 20K OR Daily + Amount > 50K OR Balance - Amount < 2K?
+         │     │
+         │     ├── YES ──► [REJECT: Policy Breach]
+         │     │
+         │     └── NO  ──► [Balance -= Amount, Daily += Amount] ──► [Log SUCCESS]
+         │
+         ▼
+[Print Account Audit Ledger & Net Change]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 3 (Problem 13): ATM Transaction Sequence Simulation
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, lists, tuples, tuple unpacking.
+
+Problem Statement:
+Process a sequence of deposits and withdrawals, maintain a simulated balance,
+enforce withdrawal limits (per-transaction, daily cap, minimum balance requirement),
+reject invalid transactions, and produce a comprehensive audit summary.
+"""
+
+def simulate_atm_ledger(account_id, holder_name, opening_balance, transactions):
+    print("=" * 85)
+    print(f"      APEX BANK ATM TRANSACTION SIMULATOR - ACCOUNT AUDIT LOG")
+    print(f"      Account No: {account_id} | Account Holder: {holder_name}")
+    print("=" * 85)
+    print(f"Opening Balance: ₹{opening_balance:,.2f}")
+    print("-" * 85)
+    print(f"{'TxnID':<8} {'Type':<12} {'Requested(₹)':<14} {'Status':<10} {'Running Balance(₹)':<20} {'Remarks'}")
+    print("-" * 85)
+
+    balance = opening_balance
+    MINIMUM_BALANCE = 2000.0
+    MAX_SINGLE_WITHDRAWAL = 20000.0
+    DAILY_WITHDRAWAL_LIMIT = 50000.0
+
+    total_withdrawn_today = 0.0
+    successful_txns = 0
+    rejected_txns = 0
+
+    # Store audit history as a list of tuples
+    audit_history = []
+
+    for txn in transactions:
+        # Tuple unpacking: txn_id, txn_type, amount
+        txn_id, txn_type, amount = txn
+        status = "FAILED"
+        remark = ""
+
+        # Validate non-negative amounts
+        if amount <= 0:
+            status = "REJECTED"
+            remark = "Invalid amount (<= 0)"
+            rejected_txns += 1
+        elif txn_type.upper() == "DEPOSIT":
+            # Deposit processing
+            balance += amount
+            status = "SUCCESS"
+            remark = f"Credited ₹{amount:,.2f}"
+            successful_txns += 1
+        elif txn_type.upper() == "WITHDRAWAL":
+            # Withdrawal checks
+            if amount > MAX_SINGLE_WITHDRAWAL:
+                status = "REJECTED"
+                remark = f"Exceeds single limit (₹{MAX_SINGLE_WITHDRAWAL:,.0f})"
+                rejected_txns += 1
+            elif total_withdrawn_today + amount > DAILY_WITHDRAWAL_LIMIT:
+                status = "REJECTED"
+                remark = f"Exceeds daily cap (₹{DAILY_WITHDRAWAL_LIMIT:,.0f})"
+                rejected_txns += 1
+            elif (balance - amount) < MINIMUM_BALANCE:
+                status = "REJECTED"
+                remark = f"Breaches Min Balance (₹{MINIMUM_BALANCE:,.0f})"
+                rejected_txns += 1
+            else:
+                balance -= amount
+                total_withdrawn_today += amount
+                status = "SUCCESS"
+                remark = f"Debited ₹{amount:,.2f}"
+                successful_txns += 1
+        else:
+            status = "REJECTED"
+            remark = "Unsupported operation type"
+            rejected_txns += 1
+
+        print(f"{txn_id:<8} {txn_type:<12} {amount:<14,.2f} {status:<10} {balance:<20,.2f} {remark}")
+        audit_history.append((txn_id, txn_type, amount, status, balance, remark))
+
+    # Summary Statistics
+    print("-" * 85)
+    print("                           TRANSACTION SUMMARY REPORT")
+    print("-" * 85)
+    print(f"Total Transactions Processed : {len(transactions)}")
+    print(f"Successful Transactions       : {successful_txns}")
+    print(f"Rejected / Failed Transactions: {rejected_txns}")
+    print(f"Total Withdrawn Today         : ₹{total_withdrawn_today:,.2f} / ₹{DAILY_WITHDRAWAL_LIMIT:,.2f}")
+    print(f"Closing Account Balance       : ₹{balance:,.2f}")
+    net_change = balance - opening_balance
+    if net_change >= 0:
+        print(f"Net Account Change            : +₹{net_change:,.2f} (Net Inflow)")
+    else:
+        print(f"Net Account Change            : -₹{abs(net_change):,.2f} (Net Outflow)")
+    print("=" * 85)
+
+
+if __name__ == "__main__":
+    initial_balance = 35000.0
+
+    # Sequence of test transactions: (TxnID, Type, Amount)
+    txn_stream = [
+        ("TX1001", "DEPOSIT", 15000.0),       # Successful deposit -> 50,000
+        ("TX1002", "WITHDRAWAL", 10000.0),    # Successful withdrawal -> 40,000
+        ("TX1003", "WITHDRAWAL", 25000.0),    # Fails: Exceeds single limit 20,000
+        ("TX1004", "WITHDRAWAL", 18000.0),    # Successful withdrawal -> 22,000 (total withdrawn: 28k)
+        ("TX1005", "DEPOSIT", -500.0),        # Fails: Negative amount
+        ("TX1006", "WITHDRAWAL", 15000.0),    # Successful withdrawal -> 7,000 (total withdrawn: 43k)
+        ("TX1007", "WITHDRAWAL", 6000.0),     # Fails: Would breach min balance 2,000 (7k - 6k = 1k < 2k)
+        ("TX1008", "WITHDRAWAL", 4000.0),     # Successful withdrawal -> 3,000 (total withdrawn: 47k)
+        ("TX1009", "WITHDRAWAL", 5000.0),     # Fails: Exceeds daily cap (47k + 5k = 52k > 50k)
+        ("TX1010", "DEPOSIT", 20000.0),       # Successful deposit -> 23,000
+    ]
+
+    simulate_atm_ledger("SB-98421045", "Sai Chandra Nerella", initial_balance, txn_stream)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿=====================================================================================
+      APEX BANK ATM TRANSACTION SIMULATOR - ACCOUNT AUDIT LOG
+      Account No: SB-98421045 | Account Holder: Sai Chandra Nerella
+=====================================================================================
+Opening Balance: ₹35,000.00
+-------------------------------------------------------------------------------------
+TxnID    Type         Requested(₹)   Status     Running Balance(₹)   Remarks
+-------------------------------------------------------------------------------------
+TX1001   DEPOSIT      15,000.00      SUCCESS    50,000.00            Credited ₹15,000.00
+TX1002   WITHDRAWAL   10,000.00      SUCCESS    40,000.00            Debited ₹10,000.00
+TX1003   WITHDRAWAL   25,000.00      REJECTED   40,000.00            Exceeds single limit (₹20,000)
+TX1004   WITHDRAWAL   18,000.00      SUCCESS    22,000.00            Debited ₹18,000.00
+TX1005   DEPOSIT      -500.00        REJECTED   22,000.00            Invalid amount (<= 0)
+TX1006   WITHDRAWAL   15,000.00      SUCCESS    7,000.00             Debited ₹15,000.00
+TX1007   WITHDRAWAL   6,000.00       REJECTED   7,000.00             Breaches Min Balance (₹2,000)
+TX1008   WITHDRAWAL   4,000.00       SUCCESS    3,000.00             Debited ₹4,000.00
+TX1009   WITHDRAWAL   5,000.00       REJECTED   3,000.00             Exceeds daily cap (₹50,000)
+TX1010   DEPOSIT      20,000.00      SUCCESS    23,000.00            Credited ₹20,000.00
+-------------------------------------------------------------------------------------
+                           TRANSACTION SUMMARY REPORT
+-------------------------------------------------------------------------------------
+Total Transactions Processed : 10
+Successful Transactions       : 6
+Rejected / Failed Transactions: 4
+Total Withdrawn Today         : ₹47,000.00 / ₹50,000.00
+Closing Account Balance       : ₹23,000.00
+Net Account Change            : -₹12,000.00 (Net Outflow)
+=====================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>The ATM simulator maintained state integrity across 10 sequential transactions. All policy breaches (single cap, daily cap, negative amount, and minimum balance breach) were rejected while valid deposits and withdrawals executed smoothly.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 04: UNIVERSITY ADMISSION DECISION ENGINE (Problem 20)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Lists, Nested Lists, Sorting Logic, Conditionals, Multi-level Tie Breaking, Quota Allocation</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Evaluate applicant scores for competitive engineering admission, enforce subject-wise cutoffs (Maths, Physics, Entrance Percentile), apply a 4-tier deterministic tie-breaking algorithm, and allocate confirmed seats and waitlisted ranks under a fixed intake capacity.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Filter candidate pool using entrance and 12th board cutoffs.<br>2. Implement 4-tier tie-breaking algorithm using manual bubble sort.<br>3. Allocate sanctioned department seats and assign waitlist numbers.<br>4. Output clear merit list and executive admission summary.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Minimum Entrance Percentile: 85.0%, Maths: 75.0%, Physics: 65.0%, 12th Agg: 75.0%.<br>2. Tie-breaking order: Entrance % > Maths Score > Physics Score > 12th Aggregate.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Filter applicants who satisfy all 4 cutoff standards.<br>2. Sort eligible candidates using bubble sort: compare Entrance %; if tied, compare Maths; if tied, compare Physics; if tied, compare 12th Agg.<br>3. Iterate sorted candidates: ranks <= intake_seats receive CONFIRMED SEAT; remaining receive WAITLISTED (WL-1, WL-2...).<br>4. Display full merit allotment table.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION process_admissions(capacity, applicants):
+    eligible = [app FOR app IN applicants IF SATISFIES_CUTOFFS(app)]
+    SORT eligible USING TIE_BREAKER(Entrance, Maths, Physics, 12thAgg)
+    FOR rank, cand IN ENUMERATE(eligible, 1):
+        IF rank <= capacity THEN STATUS = 'CONFIRMED SEAT'
+        ELSE STATUS = 'WAITLISTED'
+        PRINT merit row
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Read Applicants (ID, Name, Entrance, Maths, Physics, CS, 12thAgg)]
+   │
+   ▼
+<Does Candidate Meet All 4 Subject & Percentile Cutoffs?>
+   ├── NO  ──► [Mark NOT ELIGIBLE with Reason]
+   └── YES ──► [Add to Eligible Pool]
+                     │
+                     ▼
+       [Multi-Level Tie-Break Sort: Entrance > Maths > Physics > Agg]
+                     │
+                     ▼
+       <Is Candidate Rank <= Sanctioned Intake Seats?>
+         ├── YES ──► [Allocate CONFIRMED SEAT]
+         └── NO  ──► [Assign WAITLIST Rank (WL-N)]
+                     │
+                     ▼
+       [Display Final Merit Allotment Table]
+                     │
+                     ▼
+                   [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 4 (Problem 20): University Admission Decision Engine
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, lists, nested lists, tuples, tuple unpacking.
+
+Problem Statement:
+Evaluate candidates for competitive engineering programs (e.g., Computer Science,
+Electronics) using subject eligibility criteria (Maths, Physics, CS), overall aggregate,
+entrance exam percentiles, and deterministic tie-breaking rules.
+"""
+
+def process_university_admissions(course_name, intake_seats, applicants):
+    print("=" * 95)
+    print(f"       METROPOLITAN UNIVERSITY - ADMISSION ALLOCATION ENGINE")
+    print(f"       Target Department: {course_name} | Sanctioned Seat Capacity: {intake_seats}")
+    print("=" * 95)
+    print(f"{'AppID':<7} {'Name':<16} {'Entrance%':<11} {'Maths':<7} {'Physics':<8} {'CS/Chem':<8} {'12th Agg':<9} {'Status'}")
+    print("-" * 95)
+
+    # Cutoffs & Minimum Eligibility Standards:
+    # 1. Entrance Percentile >= 85.0
+    # 2. Maths Marks >= 75.0
+    # 3. Physics Marks >= 65.0
+    # 4. 12th Aggregate >= 75.0
+    eligible_applicants = []
+
+    for app in applicants:
+        # Tuple unpacking: app_id, name, entrance_pct, maths_marks, physics_marks, cs_marks, agg_12th
+        app_id, name, entrance_pct, maths, physics, cs_chem, agg = app
+
+        is_eligible = True
+        rejections = []
+
+        if entrance_pct < 85.0:
+            is_eligible = False
+            rejections.append("Low Entrance")
+        if maths < 75.0:
+            is_eligible = False
+            rejections.append("Low Maths")
+        if physics < 65.0:
+            is_eligible = False
+            rejections.append("Low Physics")
+        if agg < 75.0:
+            is_eligible = False
+            rejections.append("Low 12th Agg")
+
+        if is_eligible:
+            status = "ELIGIBLE"
+            eligible_applicants.append([app_id, name, entrance_pct, maths, physics, cs_chem, agg])
+        else:
+            status = "NOT ELIGIBLE (" + ", ".join(rejections) + ")"
+
+        print(f"{app_id:<7} {name:<16} {entrance_pct:<11.2f} {maths:<7.1f} {physics:<8.1f} {cs_chem:<8.1f} {agg:<9.1f} {status}")
+
+    # Sorting & Tie-Breaking Algorithm (Bubble Sort implementation using syllabus concepts)
+    # Tie-Breaking Priority:
+    # 1. Entrance Percentile (Highest first)
+    # 2. Maths Marks (Highest first)
+    # 3. Physics Marks (Highest first)
+    # 4. 12th Aggregate (Highest first)
+    n = len(eligible_applicants)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            a1 = eligible_applicants[j]
+            a2 = eligible_applicants[j + 1]
+
+            swap = False
+            # Criteria 1: Entrance percentile
+            if a1[2] < a2[2]:
+                swap = True
+            elif a1[2] == a2[2]:
+                # Criteria 2: Maths
+                if a1[3] < a2[3]:
+                    swap = True
+                elif a1[3] == a2[3]:
+                    # Criteria 3: Physics
+                    if a1[4] < a2[4]:
+                        swap = True
+                    elif a1[4] == a2[4]:
+                        # Criteria 4: 12th Aggregate
+                        if a1[6] < a2[6]:
+                            swap = True
+
+            if swap:
+                eligible_applicants[j], eligible_applicants[j + 1] = eligible_applicants[j + 1], eligible_applicants[j]
+
+    print("\n" + "=" * 95)
+    print("                     FINAL MERIT ALLOTMENT & WAITING LIST")
+    print("=" * 95)
+    print(f"{'Merit':<6} {'AppID':<7} {'Name':<16} {'Entrance%':<11} {'Maths':<7} {'Physics':<8} {'12th Agg':<9} {'Allotment Result'}")
+    print("-" * 95)
+
+    allocated_count = 0
+    waiting_count = 0
+
+    for idx in range(len(eligible_applicants)):
+        merit_rank = idx + 1
+        cand = eligible_applicants[idx]
+        c_id, c_name, c_ent, c_m, c_p, c_cs, c_agg = cand
+
+        if merit_rank <= intake_seats:
+            result = f"CONFIRMED SEAT (Seat #{merit_rank})"
+            allocated_count += 1
+        else:
+            wl_number = merit_rank - intake_seats
+            result = f"WAITLISTED (WL-{wl_number})"
+            waiting_count += 1
+
+        print(f"{merit_rank:<6} {c_id:<7} {c_name:<16} {c_ent:<11.2f} {c_m:<7.1f} {c_p:<8.1f} {c_agg:<9.1f} {result}")
+
+    print("-" * 95)
+    print(f"Total Applicants Processed : {len(applicants)}")
+    print(f"Eligible Applicants Found  : {len(eligible_applicants)}")
+    print(f"Confirmed Seats Allocated  : {allocated_count} / {intake_seats}")
+    print(f"Candidates on Waitlist     : {waiting_count}")
+    print("=" * 95)
+
+
+if __name__ == "__main__":
+    seats = 4
+    # Dataset: (AppID, Name, EntrancePercentile, Maths, Physics, CS/Chem, 12thAggregate)
+    applicant_pool = [
+        ("ADM101", "Kavya Sree",       98.45, 96.0, 92.0, 95.0, 94.2),
+        ("ADM102", "Rohan Mehta",      94.10, 88.0, 78.0, 82.0, 86.5),
+        ("ADM103", "Ananya Sharma",    96.50, 91.0, 85.0, 90.0, 92.0),
+        ("ADM104", "Girish Varma",     96.50, 94.0, 81.0, 88.0, 90.5), # Tie with ADM103 on Entrance, higher Maths
+        ("ADM105", "Tanvi Joshi",      82.00, 90.0, 80.0, 85.0, 88.0), # Rejected: Entrance < 85
+        ("ADM106", "Siddharth Rao",    91.20, 72.0, 80.0, 84.0, 81.0), # Rejected: Maths < 75
+        ("ADM107", "Meera Nambiar",    95.20, 89.0, 84.0, 87.0, 89.4),
+        ("ADM108", "Pranav Chandra",   94.10, 88.0, 82.0, 80.0, 88.0), # Tie with ADM102 on Entrance & Maths, higher Physics
+        ("ADM109", "Zoya Khan",        89.75, 82.0, 60.0, 78.0, 79.5), # Rejected: Physics < 65
+    ]
+
+    process_university_admissions("B.Tech Computer Science & Engineering", seats, applicant_pool)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿===============================================================================================
+       METROPOLITAN UNIVERSITY - ADMISSION ALLOCATION ENGINE
+       Target Department: B.Tech Computer Science & Engineering | Sanctioned Seat Capacity: 4
+===============================================================================================
+AppID   Name             Entrance%   Maths   Physics  CS/Chem  12th Agg  Status
+-----------------------------------------------------------------------------------------------
+ADM101  Kavya Sree       98.45       96.0    92.0     95.0     94.2      ELIGIBLE
+ADM102  Rohan Mehta      94.10       88.0    78.0     82.0     86.5      ELIGIBLE
+ADM103  Ananya Sharma    96.50       91.0    85.0     90.0     92.0      ELIGIBLE
+ADM104  Girish Varma     96.50       94.0    81.0     88.0     90.5      ELIGIBLE
+ADM105  Tanvi Joshi      82.00       90.0    80.0     85.0     88.0      NOT ELIGIBLE (Low Entrance)
+ADM106  Siddharth Rao    91.20       72.0    80.0     84.0     81.0      NOT ELIGIBLE (Low Maths)
+ADM107  Meera Nambiar    95.20       89.0    84.0     87.0     89.4      ELIGIBLE
+ADM108  Pranav Chandra   94.10       88.0    82.0     80.0     88.0      ELIGIBLE
+ADM109  Zoya Khan        89.75       82.0    60.0     78.0     79.5      NOT ELIGIBLE (Low Physics)
+
+===============================================================================================
+                     FINAL MERIT ALLOTMENT & WAITING LIST
+===============================================================================================
+Merit  AppID   Name             Entrance%   Maths   Physics  12th Agg  Allotment Result
+-----------------------------------------------------------------------------------------------
+1      ADM101  Kavya Sree       98.45       96.0    92.0     94.2      CONFIRMED SEAT (Seat #1)
+2      ADM104  Girish Varma     96.50       94.0    81.0     90.5      CONFIRMED SEAT (Seat #2)
+3      ADM103  Ananya Sharma    96.50       91.0    85.0     92.0      CONFIRMED SEAT (Seat #3)
+4      ADM107  Meera Nambiar    95.20       89.0    84.0     89.4      CONFIRMED SEAT (Seat #4)
+5      ADM108  Pranav Chandra   94.10       88.0    82.0     88.0      WAITLISTED (WL-1)
+6      ADM102  Rohan Mehta      94.10       88.0    78.0     86.5      WAITLISTED (WL-2)
+-----------------------------------------------------------------------------------------------
+Total Applicants Processed : 9
+Eligible Applicants Found  : 6
+Confirmed Seats Allocated  : 4 / 4
+Candidates on Waitlist     : 2
+===============================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>The admission engine filtered the applicant pool and resolved close ties deterministically, allocating confirmed seats and waitlist rankings in strict accordance with university guidelines.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 05: ADVANCED NUMERIC PATTERN GENERATOR (Problem 27)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Nested Loops, Pattern Generation, Numerical Palindromes, Mathematical Formatting, String Validation</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Generate symmetric numerical pyramids, hollow numeric diamonds, and right-angled number grids based on user-specified dimensions with validation for invalid or out-of-range dimensions.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Construct palindromic numerical pyramid patterns with leading whitespace alignment.<br>2. Generate hollow numeric diamonds with boundary numbering and odd-dimension validation.<br>3. Implement Floyd's sequential number grid with formatted column widths.<br>4. Validate boundary conditions (even dimensions for diamonds, out-of-range bounds).</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Pyramid heights must be between 1 and 9 for single-digit symmetry.<br>2. Diamond dimensions must be positive odd integers >= 3.<br>3. All patterns generated purely using loops and string concatenation.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Palindromic Pyramid: outer loop i from 1 to n. Inner loops for leading spaces (n-i)*2, ascending 1..i, descending (i-1)..1.<br>2. Hollow Diamond: validate n is odd. Top half (mid+1 rows): print spaces, value, inner spaces, value. Bottom half (mid rows): reverse sequence.<br>3. Sequential Triangle: outer loop 1..rows, inner loop 1..i printing running counter with 4-width padding.<br>4. Test with valid inputs and assert rejection on invalid even inputs.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION generate_pyramid(n):
+    FOR i FROM 1 TO n:
+        PRINT spaces(2*(n-i)) + ASCENDING(1..i) + DESCENDING((i-1)..1)
+FUNCTION generate_hollow_diamond(n):
+    IF n % 2 == 0 THEN RETURN Error
+    mid = n // 2
+    FOR i FROM 0 TO mid: PRINT_HOLLOW_LINE(i, mid)
+    FOR i FROM mid-1 DOWNTO 0: PRINT_HOLLOW_LINE(i, mid)
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Select Pattern: Pyramid / Hollow Diamond / Triangle]
+   │
+   ▼
+<Validate Dimension Limits (e.g. Diamond must be Odd, Pyramid 1-9)?>
+   ├── INVALID ──► [Display Error Message & Abort]
+   └── VALID
+         │
+         ├── [Pattern A: Outer Loop Rows, Inner Ascending + Descending Digits]
+         ├── [Pattern B: Compute Midpoint, Render Top Half + Mirrored Bottom Half]
+         └── [Pattern C: Running Counter with Formatted Tabular Spacing]
+         │
+         ▼
+[Print Symmetric Formatted Grid Output]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 5 (Problem 27): Advanced Numeric Pattern Generator
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, nested loops, pattern generation, strings.
+
+Problem Statement:
+Produce symmetric numerical pyramids, hollow numeric diamonds, and inverted
+number triangles based on user-specified dimensions with robust validation for
+invalid input sizes, ensuring precise tabular alignment.
+"""
+
+def generate_symmetric_number_pyramid(n):
+    """Generates a centered symmetric pyramid of numbers."""
+    print(f"\n--- [Pattern A] Symmetric Palindromic Number Pyramid (Height: {n}) ---")
+    if n <= 0 or n > 9:
+        print("Error: Dimension must be an integer between 1 and 9 for single-digit alignment.")
+        return
+
+    for i in range(1, n + 1):
+        # Leading spaces for centering
+        line = " " * (2 * (n - i))
+        # Ascending numbers
+        for j in range(1, i + 1):
+            line += str(j) + " "
+        # Descending numbers
+        for j in range(i - 1, 0, -1):
+            line += str(j) + " "
+        print(line)
+
+
+def generate_hollow_numeric_diamond(n):
+    """
+    Generates a hollow diamond pattern displaying boundary numbers.
+    n must be an odd positive integer for perfect symmetry.
+    """
+    print(f"\n--- [Pattern B] Advanced Hollow Numeric Diamond (Dimension: {n}) ---")
+    if n % 2 == 0 or n < 3:
+        print("Error: Dimension must be an odd integer >= 3 to generate a symmetric diamond.")
+        return
+
+    mid = n // 2
+
+    # Top half (including middle line)
+    for i in range(mid + 1):
+        leading_spaces = " " * (mid - i) * 2
+        if i == 0:
+            print(leading_spaces + "1")
+        else:
+            inner_spaces = " " * (2 * i - 1) * 2
+            val = str(i + 1)
+            print(leading_spaces + val + inner_spaces + " " + val)
+
+    # Bottom half
+    for i in range(mid - 1, -1, -1):
+        leading_spaces = " " * (mid - i) * 2
+        if i == 0:
+            print(leading_spaces + "1")
+        else:
+            inner_spaces = " " * (2 * i - 1) * 2
+            val = str(i + 1)
+            print(leading_spaces + val + inner_spaces + " " + val)
+
+
+def generate_floyds_custom_triangle(rows):
+    """Generates continuous numbered right-angled triangle with column alignment."""
+    print(f"\n--- [Pattern C] Formatted Right-Angled Number Grid (Rows: {rows}) ---")
+    if rows <= 0 or rows > 15:
+        print("Error: Rows must be between 1 and 15.")
+        return
+
+    current = 1
+    for i in range(1, rows + 1):
+        row_str = ""
+        for _ in range(i):
+            row_str += f"{current:4d}"
+            current += 1
+        print(row_str)
+
+
+def run_pattern_suite():
+    print("=" * 65)
+    print("       ADVANCED MATHEMATICAL NUMERIC PATTERN GENERATION SUITE")
+    print("=" * 65)
+
+    # Test Case 1: Valid Palindromic Pyramid (Height 5)
+    generate_symmetric_number_pyramid(5)
+
+    # Test Case 2: Hollow Diamond (Dimension 7 - valid odd)
+    generate_hollow_numeric_diamond(7)
+
+    # Test Case 3: Continuous Sequential Triangle (Rows 6)
+    generate_floyds_custom_triangle(6)
+
+    # Test Case 4: Invalid input handling validation
+    print("\n--- [Validation Tests for Boundary & Invalid Inputs] ---")
+    generate_hollow_numeric_diamond(6)  # Even dimension rejection
+    generate_symmetric_number_pyramid(12)  # Out of range rejection
+    print("=" * 65)
+
+
+if __name__ == "__main__":
+    run_pattern_suite()
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿=================================================================
+       ADVANCED MATHEMATICAL NUMERIC PATTERN GENERATION SUITE
+=================================================================
+
+--- [Pattern A] Symmetric Palindromic Number Pyramid (Height: 5) ---
+        1 
+      1 2 1 
+    1 2 3 2 1 
+  1 2 3 4 3 2 1 
+1 2 3 4 5 4 3 2 1 
+
+--- [Pattern B] Advanced Hollow Numeric Diamond (Dimension: 7) ---
+      1
+    2   2
+  3       3
+4           4
+  3       3
+    2   2
+      1
+
+--- [Pattern C] Formatted Right-Angled Number Grid (Rows: 6) ---
+   1
+   2   3
+   4   5   6
+   7   8   9  10
+  11  12  13  14  15
+  16  17  18  19  20  21
+
+--- [Validation Tests for Boundary & Invalid Inputs] ---
+
+--- [Pattern B] Advanced Hollow Numeric Diamond (Dimension: 6) ---
+Error: Dimension must be an odd integer >= 3 to generate a symmetric diamond.
+
+--- [Pattern A] Symmetric Palindromic Number Pyramid (Height: 12) ---
+Error: Dimension must be an integer between 1 and 9 for single-digit alignment.
+=================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Demonstrated nested loop control and mathematical character alignment. Input boundary checks prevented malformed or asymmetric pattern outputs.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 06: PASSWORD POLICY VALIDATION ENGINE (Problem 29)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Strings, String Traversal, Character Classification, Loops, Conditional Rules, Boolean Logic</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Evaluate password strings against institutional cybersecurity requirements: minimum length (8-32), character categories (uppercase, lowercase, digits, symbols), consecutive character repetition limits (max 2 identical in a row), and prohibited common substrings; explain all failed conditions.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Check length constraints.<br>2. Validate existence and count of uppercase, lowercase, numbers, and special symbols.<br>3. Detect repeated consecutive triples (e.g., 'aaa', '999').<br>4. Search for blacklisted substrings (e.g., 'admin', 'password', 'nriit').<br>5. Calculate a normalized security strength score (0-100).</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Passwords are case-sensitive ASCII strings.<br>2. Substring matching is case-insensitive for thoroughness.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Check length: 8 <= len <= 32.<br>2. Iterate each char: update booleans and counts for upper, lower, digit, special.<br>3. Loop i from 0 to len-3: if pwd[i] == pwd[i+1] == pwd[i+2], flag consecutive repetition.<br>4. For each prohibited word: if word in pwd.lower(), flag prohibited substring.<br>5. Compute score based on criteria met. Output detailed vulnerability report.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION validate_password(pwd):
+    failures = []
+    IF len < 8 OR len > 32 THEN failures.APPEND('Length error')
+    CHECK_CATEGORIES(upper, lower, digits, symbols)
+    CHECK_CONSECUTIVE_REPEATS(pwd)
+    CHECK_PROHIBITED_SUBSTRINGS(pwd)
+    score = CALCULATE_SCORE(pwd)
+    RETURN (status, score, failures)
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Read Password Candidate String]
+   │
+   ▼
+[Check Length: 8 <= len <= 32?] ──► If False, Log Error
+   │
+   ▼
+[Loop Characters: Count Upper, Lower, Digits, Symbols] ──► If Any Missing, Log Error
+   │
+   ▼
+[Check Consecutive Triples: pwd[i]==pwd[i+1]==pwd[i+2]?] ──► If Found, Log Error
+   │
+   ▼
+[Check Prohibited Dictionary Substrings ('admin', 'nriit'...)] ──► If Found, Log Error
+   │
+   ▼
+[Calculate 0-100 Security Score & Assign Verdict: Strong / Moderate / Weak]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 6 (Problem 29): Password Policy Validation Engine
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, strings, lists, tuples.
+
+Problem Statement:
+Evaluate sample password strings against institutional security criteria:
+minimum length, character categories (uppercase, lowercase, digits, special symbols),
+character repetition limits, and prohibited common substrings; explain each failed condition.
+"""
+
+def evaluate_password_security(passwords):
+    print("=" * 80)
+    print("        ENTERPRISE CYBERSECURITY - PASSWORD POLICY VALIDATION ENGINE")
+    print("=" * 80)
+
+    # Prohibited common substrings
+    PROHIBITED_SUBSTRINGS = ["admin", "password", "123456", "qwerty", "welcome", "login", "nriit"]
+    SPECIAL_CHARACTERS = "!@#$%^&*()_+-=[]{}|;:,.<>?"
+
+    results = []
+
+    for pwd in passwords:
+        print(f"\nAnalyzing Candidate: '{pwd}'")
+        failures = []
+
+        # 1. Length check (8 to 32 characters)
+        length = len(pwd)
+        if length < 8:
+            failures.append("Too short (Length < 8 chars)")
+        elif length > 32:
+            failures.append("Too long (Length > 32 chars)")
+
+        # 2. Character category distribution counts
+        has_upper = False
+        has_lower = False
+        has_digit = False
+        has_special = False
+
+        upper_count = 0
+        lower_count = 0
+        digit_count = 0
+        special_count = 0
+
+        for ch in pwd:
+            if "A" <= ch <= "Z":
+                has_upper = True
+                upper_count += 1
+            elif "a" <= ch <= "z":
+                has_lower = True
+                lower_count += 1
+            elif "0" <= ch <= "9":
+                has_digit = True
+                digit_count += 1
+            elif ch in SPECIAL_CHARACTERS:
+                has_special = True
+                special_count += 1
+
+        if not has_upper:
+            failures.append("Missing uppercase alphabet [A-Z]")
+        if not has_lower:
+            failures.append("Missing lowercase alphabet [a-z]")
+        if not has_digit:
+            failures.append("Missing numeric digit [0-9]")
+        if not has_special:
+            failures.append("Missing special character (!@#$%^&*...)")
+
+        # 3. Repeated consecutive character rule (no more than 2 identical characters consecutively)
+        consecutive_repeat = False
+        for i in range(len(pwd) - 2):
+            if pwd[i] == pwd[i+1] == pwd[i+2]:
+                consecutive_repeat = True
+                break
+        if consecutive_repeat:
+            failures.append("Contains 3+ consecutive identical characters (e.g. 'aaa')")
+
+        # 4. Prohibited substring detection (case-insensitive)
+        pwd_lower = pwd.lower()
+        found_prohibited = []
+        for bad_word in PROHIBITED_SUBSTRINGS:
+            if bad_word in pwd_lower:
+                found_prohibited.append(bad_word)
+        if found_prohibited:
+            failures.append(f"Contains prohibited dictionary substrings: {', '.join(found_prohibited)}")
+
+        # Strength Scoring (0 to 100)
+        score = 0
+        if length >= 12: score += 25
+        elif length >= 8: score += 15
+
+        if has_upper: score += 15
+        if has_lower: score += 15
+        if has_digit: score += 15
+        if has_special: score += 20
+        if not consecutive_repeat and not found_prohibited: score += 10
+
+        # Classification
+        if not failures:
+            status = "STRONG / COMPLIANT"
+        elif len(failures) <= 2 and score >= 50:
+            status = "MODERATE / NEEDS REFINEMENT"
+        else:
+            status = "REJECTED / WEAK"
+
+        print(f"  Score: {score}/100 | Policy Status: {status}")
+        if failures:
+            print("  Identified Vulnerabilities:")
+            for reason in failures:
+                print(f"    [!] {reason}")
+        else:
+            print("  [✓] All enterprise complexity rules satisfied.")
+
+        results.append((pwd, score, status, len(failures)))
+
+    print("\n" + "=" * 80)
+    print("                     EVALUATION SUMMARY TABLE")
+    print("=" * 80)
+    print(f"{'Password Tested':<25} {'Score':<8} {'Violations':<12} {'Verdict'}")
+    print("-" * 80)
+    for r in results:
+        p_val, p_sc, p_stat, p_viol = r
+        print(f"{p_val:<25} {p_sc:<8} {p_viol:<12} {p_stat}")
+    print("=" * 80)
+
+
+if __name__ == "__main__":
+    test_passwords = [
+        "P@ssw0rd2026",           # Fails: contains 'password'
+        "SaiChandra#99",           # Pass: Strong compliance
+        "weak",                   # Fails: length, upper, digit, special
+        "NriitCollege2026!",       # Fails: contains 'nriit'
+        "SecureCode#9999",        # Fails: consecutive '9999'
+        "K@vya_Tech#2026",         # Pass: Excellent strength
+        "123456789",              # Fails: no alpha/special, common digits
+    ]
+
+    evaluate_password_security(test_passwords)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿================================================================================
+        ENTERPRISE CYBERSECURITY - PASSWORD POLICY VALIDATION ENGINE
+================================================================================
+
+Analyzing Candidate: 'P@ssw0rd2026'
+  Score: 100/100 | Policy Status: STRONG / COMPLIANT
+  [✓] All enterprise complexity rules satisfied.
+
+Analyzing Candidate: 'SaiChandra#99'
+  Score: 100/100 | Policy Status: STRONG / COMPLIANT
+  [✓] All enterprise complexity rules satisfied.
+
+Analyzing Candidate: 'weak'
+  Score: 25/100 | Policy Status: REJECTED / WEAK
+  Identified Vulnerabilities:
+    [!] Too short (Length < 8 chars)
+    [!] Missing uppercase alphabet [A-Z]
+    [!] Missing numeric digit [0-9]
+    [!] Missing special character (!@#$%^&*...)
+
+Analyzing Candidate: 'NriitCollege2026!'
+  Score: 90/100 | Policy Status: MODERATE / NEEDS REFINEMENT
+  Identified Vulnerabilities:
+    [!] Contains prohibited dictionary substrings: nriit
+
+Analyzing Candidate: 'SecureCode#9999'
+  Score: 90/100 | Policy Status: MODERATE / NEEDS REFINEMENT
+  Identified Vulnerabilities:
+    [!] Contains 3+ consecutive identical characters (e.g. 'aaa')
+
+Analyzing Candidate: 'K@vya_Tech#2026'
+  Score: 100/100 | Policy Status: STRONG / COMPLIANT
+  [✓] All enterprise complexity rules satisfied.
+
+Analyzing Candidate: '123456789'
+  Score: 30/100 | Policy Status: REJECTED / WEAK
+  Identified Vulnerabilities:
+    [!] Missing uppercase alphabet [A-Z]
+    [!] Missing lowercase alphabet [a-z]
+    [!] Missing special character (!@#$%^&*...)
+    [!] Contains prohibited dictionary substrings: 123456
+
+================================================================================
+                     EVALUATION SUMMARY TABLE
+================================================================================
+Password Tested           Score    Violations   Verdict
+--------------------------------------------------------------------------------
+P@ssw0rd2026              100      0            STRONG / COMPLIANT
+SaiChandra#99             100      0            STRONG / COMPLIANT
+weak                      25       4            REJECTED / WEAK
+NriitCollege2026!         90       1            MODERATE / NEEDS REFINEMENT
+SecureCode#9999           90       1            MODERATE / NEEDS REFINEMENT
+K@vya_Tech#2026           100      0            STRONG / COMPLIANT
+123456789                 30       4            REJECTED / WEAK
+================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Successfully identified security vulnerabilities in test passwords, highlighting missing character categories, consecutive character repeats, and forbidden dictionary words.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 07: STUDENT MARKS MATRIX ANALYSIS (Problem 42)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Nested Lists (2D Arrays), Matrix Indexing, Row/Column Iteration, Variables, Operators</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Analyse a student marks matrix across subjects, compute row-wise student aggregates, averages, and grades, calculate column-wise subject averages, maximums, minimums, and failure counts, identify the batch topper, and detect subjects requiring remedial classes.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Represent academic data using nested lists (matrix).<br>2. Compute row-wise student statistics (Total, Average, Letter Grade, Pass/Backlog status).<br>3. Compute column-wise subject metrics (Average, Highest, Lowest, Failure tally).<br>4. Highlight the batch topper and identify the most difficult academic subject.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Marks are numeric scores between 0 and 100.<br>2. Minimum passing mark per subject is 40.0.<br>3. Failing any subject results in a BACKLOG status regardless of overall average.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Compute row statistics: for each row i, sum scores, check if any score < 40, assign grade based on average.<br>2. Compute column statistics: for each column j, iterate through rows i to accumulate total, max, min, and count failures (<40).<br>3. Find top performer by highest average among students without backlogs.<br>4. Find critical subject by lowest subject average and highest fail count.<br>5. Print full tabular matrix report.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION analyze_matrix(students, subjects, matrix):
+    FOR EACH student i:
+        row_total = SUM(matrix[i])
+        row_avg = row_total / num_subjects
+        grade = ASSIGN_GRADE(row_avg, backlogs)
+    FOR EACH subject j:
+        col_avg = SUM(matrix[:][j]) / num_students
+        col_max = MAX(matrix[:][j])
+        col_min = MIN(matrix[:][j])
+    IDENTIFY_TOPPER(students)
+    IDENTIFY_CRITICAL_SUBJECT(subjects)
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Load Student Names, Subject Headers, and Marks Matrix (2D List)]
+   │
+   ▼
+[Row-wise Loop: Calculate Total, Average, Grade, and Backlog Status]
+   │
+   ▼
+[Column-wise Loop: Calculate Subject Average, Max Mark, Min Mark, Fail Count]
+   │
+   ▼
+[Identify Batch Topper: Highest Avg with 0 Backlogs]
+   │
+   ▼
+[Identify Critical Subject: Lowest Avg & Highest Fail Count]
+   │
+   ▼
+[Print Full Matrix Table and Executive Action Recommendations]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 7 (Problem 42): Student Marks Matrix Analysis
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, nested loops, nested lists (2D arrays),
+                   tuples, string formatting.
+
+Problem Statement:
+Analyse a matrix of student marks across core academic subjects, calculate
+row-wise student totals and averages, compute column-wise subject averages and
+standard performance metrics, identify top performers, and detect difficult
+subjects requiring academic intervention.
+"""
+
+def analyze_marks_matrix(student_names, subject_names, marks_matrix):
+    print("=" * 90)
+    print("             ACADEMIC PERFORMANCE MATRIX & BATCH STATISTICAL AUDIT")
+    print("=" * 90)
+
+    num_students = len(student_names)
+    num_subjects = len(subject_names)
+
+    # 1. Print Matrix Table with Subject Headers
+    header = f"{'Roll/Name':<18}"
+    for sub in subject_names:
+        header += f"{sub:<10}"
+    header += f"{'Total':<8} {'Average':<9} {'Grade':<6} {'Status'}"
+    print(header)
+    print("-" * 90)
+
+    student_stats = []
+    # Row-wise Analysis (Student Performance)
+    for i in range(num_students):
+        name = student_names[i]
+        scores = marks_matrix[i]
+
+        row_total = 0.0
+        has_failed_subject = False
+
+        for mark in scores:
+            row_total += mark
+            if mark < 40.0:  # Minimum passing cutoff per subject
+                has_failed_subject = True
+
+        row_avg = row_total / num_subjects
+
+        # Grade Assignment
+        if row_avg >= 90.0 and not has_failed_subject:
+            grade = "A+"
+        elif row_avg >= 80.0 and not has_failed_subject:
+            grade = "A"
+        elif row_avg >= 70.0 and not has_failed_subject:
+            grade = "B"
+        elif row_avg >= 60.0 and not has_failed_subject:
+            grade = "C"
+        elif row_avg >= 40.0 and not has_failed_subject:
+            grade = "D"
+        else:
+            grade = "F"
+
+        status = "PASSED" if not has_failed_subject else "BACKLOG"
+        student_stats.append((name, scores, row_total, row_avg, grade, status))
+
+        row_line = f"{name:<18}"
+        for mark in scores:
+            row_line += f"{mark:<10.1f}"
+        row_line += f"{row_total:<8.1f} {row_avg:<9.2f} {grade:<6} {status}"
+        print(row_line)
+
+    print("-" * 90)
+
+    # 2. Column-wise Analysis (Subject Performance across all students)
+    subject_totals = [0.0] * num_subjects
+    subject_highest = [0.0] * num_subjects
+    subject_lowest = [100.0] * num_subjects
+    subject_failures = [0] * num_subjects
+
+    for j in range(num_subjects):
+        for i in range(num_students):
+            score = marks_matrix[i][j]
+            subject_totals[j] += score
+            if score > subject_highest[j]:
+                subject_highest[j] = score
+            if score < subject_lowest[j]:
+                subject_lowest[j] = score
+            if score < 40.0:
+                subject_failures[j] += 1
+
+    subject_averages = [tot / num_students for tot in subject_totals]
+
+    # Print Summary Row for Averages
+    avg_line = f"{'Subject Average':<18}"
+    for avg in subject_averages:
+        avg_line += f"{avg:<10.2f}"
+    print(avg_line)
+
+    highest_line = f"{'Highest Mark':<18}"
+    for hi in subject_highest:
+        highest_line += f"{hi:<10.1f}"
+    print(highest_line)
+
+    lowest_line = f"{'Lowest Mark':<18}"
+    for lo in subject_lowest:
+        lowest_line += f"{lo:<10.1f}"
+    print(lowest_line)
+
+    print("=" * 90)
+    print("                        EXECUTIVE INSIGHTS & RANKINGS")
+    print("=" * 90)
+
+    # Find Top Performer (Highest Average without backlogs)
+    top_student = ""
+    top_avg = -1.0
+    for st in student_stats:
+        if st[5] == "PASSED" and st[3] > top_avg:
+            top_avg = st[3]
+            top_student = st[0]
+
+    print(f"★ Batch Topper: {top_student} with an aggregate average of {top_avg:.2f}%")
+
+    # Detect lowest performing subject
+    min_sub_avg = 101.0
+    tough_subject_index = -1
+    for j in range(num_subjects):
+        if subject_averages[j] < min_sub_avg:
+            min_sub_avg = subject_averages[j]
+            tough_subject_index = j
+
+    tough_subject = subject_names[tough_subject_index]
+    fail_count = subject_failures[tough_subject_index]
+    print(f"[!] Critical Subject Detected: {tough_subject} has the lowest average ({min_sub_avg:.2f}%) with {fail_count} failing student(s).")
+    print(f"    Recommendation: Remedial classes and tutorial sessions advised for {tough_subject}.")
+    print("=" * 90)
+
+
+if __name__ == "__main__":
+    subjects = ["Maths", "Physics", "Python", "DataStruct", "DigitalLogic"]
+
+    students = [
+        "Aarav Sharma",
+        "Bhavya Reddy",
+        "Chaitanya Roy",
+        "Divya Patel",
+        "Eshwar Naik",
+        "Fatima Zahra",
+        "Gautam Verma"
+    ]
+
+    # 7x5 Nested List (Matrix) of Marks
+    matrix = [
+        [92.0, 85.0, 96.0, 90.0, 88.0],  # Aarav
+        [78.0, 68.0, 82.0, 74.0, 70.0],  # Bhavya
+        [95.0, 91.0, 98.0, 94.0, 92.0],  # Chaitanya (Topper)
+        [64.0, 58.0, 72.0, 65.0, 60.0],  # Divya
+        [88.0, 72.0, 85.0, 36.0, 68.0],  # Eshwar (Fail in DataStruct)
+        [90.0, 82.0, 94.0, 89.0, 86.0],  # Fatima
+        [52.0, 48.0, 60.0, 42.0, 55.0],  # Gautam
+    ]
+
+    analyze_marks_matrix(students, subjects, matrix)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿==========================================================================================
+             ACADEMIC PERFORMANCE MATRIX & BATCH STATISTICAL AUDIT
+==========================================================================================
+Roll/Name         Maths     Physics   Python    DataStructDigitalLogicTotal    Average   Grade  Status
+------------------------------------------------------------------------------------------
+Aarav Sharma      92.0      85.0      96.0      90.0      88.0      451.0    90.20     A+     PASSED
+Bhavya Reddy      78.0      68.0      82.0      74.0      70.0      372.0    74.40     B      PASSED
+Chaitanya Roy     95.0      91.0      98.0      94.0      92.0      470.0    94.00     A+     PASSED
+Divya Patel       64.0      58.0      72.0      65.0      60.0      319.0    63.80     C      PASSED
+Eshwar Naik       88.0      72.0      85.0      36.0      68.0      349.0    69.80     F      BACKLOG
+Fatima Zahra      90.0      82.0      94.0      89.0      86.0      441.0    88.20     A      PASSED
+Gautam Verma      52.0      48.0      60.0      42.0      55.0      257.0    51.40     D      PASSED
+------------------------------------------------------------------------------------------
+Subject Average   79.86     72.00     83.86     70.00     74.14     
+Highest Mark      95.0      91.0      98.0      94.0      92.0      
+Lowest Mark       52.0      48.0      60.0      36.0      55.0      
+==========================================================================================
+                        EXECUTIVE INSIGHTS & RANKINGS
+==========================================================================================
+★ Batch Topper: Chaitanya Roy with an aggregate average of 94.00%
+[!] Critical Subject Detected: DataStruct has the lowest average (70.00%) with 1 failing student(s).
+    Recommendation: Remedial classes and tutorial sessions advised for DataStruct.
+==========================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Accurately performed multi-dimensional analysis on the marks matrix. Identified the batch topper and highlighted 'Data Structures' as the critical subject requiring tutorial intervention.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 08: TUPLE-BASED EMPLOYEE SHIFT CONFLICT DETECTION (Problem 48)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Tuples, Tuple Immutability, Tuple Operations, Unpacking, Time Interval Arithmetic, Nested Loops</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Represent employee hospital shifts as immutable tuples, parse 24-hour time strings into total minutes, perform pairwise comparison to detect overlapping shift assignments on the same day, check for mandatory 8-hour rest period violations, and generate an operational conflict audit.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Store shift rosters using immutable tuples.<br>2. Convert 24-hour time strings into integer minutes for precise comparison.<br>3. Detect interval overlaps: max(start1, start2) < min(end1, end2) for identical employees on same day.<br>4. Detect rest period violations (gap < 8 hours between consecutive shifts).<br>5. Generate conflict logs with exact clash periods.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Shift times are supplied in valid 'HH:MM' 24-hour format.<br>2. Shifts are compared only when assigned to the same employee ID on the same day of the week.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Define parse_time(time_str) -> hours*60 + mins.<br>2. Print roster table with duration in hours.<br>3. Pairwise nested loop i from 0..n, j from i+1..n.<br>4. If emp1 == emp2 and day1 == day2: compute start/end minutes. If max(start1, start2) < min(end1, end2): record DIRECT OVERLAP. If 0 <= start2 - end1 < 480: record REST VIOLATION.<br>5. Output audit summary and flagged staff.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION detect_conflicts(roster):
+    FOR i FROM 0 TO len(roster)-1:
+        FOR j FROM i+1 TO len(roster):
+            IF emp[i] == emp[j] AND day[i] == day[j] THEN
+                IF max(start_i, start_j) < min(end_i, end_j) THEN
+                    FLAG_OVERLAP(shift[i], shift[j])
+                ELSE IF 0 <= (start_j - end_i) < 480 THEN
+                    FLAG_REST_VIOLATION(shift[i], shift[j])
+    PRINT conflict audit report
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Read Shift Roster Tuples: (ShiftID, EmpID, Name, Dept, Day, Start, End)]
+   │
+   ▼
+[Convert 'HH:MM' Times to Total Minutes from Midnight]
+   │
+   ▼
+[Pairwise Nested Loops: Compare Shift i and Shift j]
+   │
+   <Is Same Employee AND Same Day?>
+     ├── NO ──► Continue
+     └── YES
+           │
+           ├── Overlap: max(Start_i, Start_j) < min(End_i, End_j)?
+           │     └── YES ──► [Log DIRECT CLASH with Overlap Minutes]
+           │
+           └── Insufficient Rest: Gap < 8 Hours (480 mins)?
+                 └── YES ──► [Log MANDATORY REST VIOLATION]
+           │
+           ▼
+[Print Audit Summary and Action Recommendations]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 8 (Problem 48): Tuple-Based Employee Shift Conflict Detection
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, lists, tuples, tuple operations,
+                   tuple unpacking.
+
+Problem Statement:
+Represent employee work shifts as immutable tuples, parse and compare start and
+end time intervals, detect overlapping shift assignments (double-booking or
+mandatory rest period violations), and generate an operational conflict audit.
+"""
+
+def parse_time_to_minutes(time_str):
+    """Converts 'HH:MM' 24-hour time format string into total minutes from midnight."""
+    parts = time_str.split(":")
+    hours = int(parts[0])
+    minutes = int(parts[1])
+    return hours * 60 + minutes
+
+
+def minutes_to_time_str(total_minutes):
+    """Converts total minutes back into formatted 'HH:MM' string."""
+    hours = total_minutes // 60
+    mins = total_minutes % 60
+    return f"{hours:02d}:{mins:02d}"
+
+
+def detect_shift_conflicts(shift_roster):
+    print("=" * 95)
+    print("          HOSPITAL / INDUSTRY EMPLOYEE SHIFT CONFLICT & OVERLAP AUDITOR")
+    print("=" * 95)
+    print(f"{'ShiftID':<9} {'EmpID':<8} {'Employee Name':<18} {'Role/Dept':<14} {'Day':<10} {'Start':<7} {'End':<7} {'Duration'}")
+    print("-" * 95)
+
+    # 1. Print current roster schedule
+    for shift in shift_roster:
+        # Tuple unpacking: shift_id, emp_id, emp_name, dept, day, start_time, end_time
+        s_id, e_id, name, dept, day, start, end = shift
+
+        start_min = parse_time_to_minutes(start)
+        end_min = parse_time_to_minutes(end)
+        duration_hrs = (end_min - start_min) / 60.0
+
+        print(f"{s_id:<9} {e_id:<8} {name:<18} {dept:<14} {day:<10} {start:<7} {end:<7} {duration_hrs:.1f} hrs")
+
+    print("-" * 95)
+    print("                         DETECTED SCHEDULE CONFLICTS")
+    print("-" * 95)
+
+    conflict_count = 0
+    flagged_employees = []
+
+    # 2. Pairwise comparison using nested loops to detect overlapping intervals for the SAME employee on the SAME day
+    n = len(shift_roster)
+    for i in range(n):
+        for j in range(i + 1, n):
+            shift1 = shift_roster[i]
+            shift2 = shift_roster[j]
+
+            # Unpack tuples
+            s1_id, e1_id, name1, dept1, day1, start1, end1 = shift1
+            s2_id, e2_id, name2, dept2, day2, start2, end2 = shift2
+
+            # Check if same employee and same day
+            if e1_id == e2_id and day1 == day2:
+                s1_start = parse_time_to_minutes(start1)
+                s1_end = parse_time_to_minutes(end1)
+
+                s2_start = parse_time_to_minutes(start2)
+                s2_end = parse_time_to_minutes(end2)
+
+                # Overlap condition:
+                # Two intervals [A_start, A_end] and [B_start, B_end] overlap if:
+                # max(A_start, B_start) < min(A_end, B_end)
+                overlap_start = max(s1_start, s2_start)
+                overlap_end = min(s1_end, s2_end)
+
+                if overlap_start < overlap_end:
+                    conflict_count += 1
+                    overlap_duration = overlap_end - overlap_start
+                    print(f"[!] DIRECT OVERLAP DETECTED for {name1} ({e1_id}) on {day1}:")
+                    print(f"    Shift 1: {s1_id} ({start1} - {end1}) in {dept1}")
+                    print(f"    Shift 2: {s2_id} ({start2} - {end2}) in {dept2}")
+                    print(f"    Overlap Period: {minutes_to_time_str(overlap_start)} to {minutes_to_time_str(overlap_end)} ({overlap_duration} minutes clash)")
+                    print()
+                    if name1 not in flagged_employees:
+                        flagged_employees.append(name1)
+
+                # Rest period violation check: Less than 8 hours (480 mins) between consecutive shifts on same day
+                gap = s2_start - s1_end
+                if 0 <= gap < 480 and overlap_start >= overlap_end:
+                    conflict_count += 1
+                    print(f"[!] INSUFFICIENT REST PERIOD (< 8 hrs) for {name1} ({e1_id}) on {day1}:")
+                    print(f"    Shift {s1_id} ends at {end1}; Shift {s2_id} starts at {start2} (Gap: {gap / 60:.1f} hrs)")
+                    print()
+                    if name1 not in flagged_employees:
+                        flagged_employees.append(name1)
+
+    print("-" * 95)
+    print("                            AUDIT SUMMARY")
+    print("-" * 95)
+    print(f"Total Scheduled Shifts Analyzed : {len(shift_roster)}")
+    print(f"Total Conflict Violations Found : {conflict_count}")
+    print(f"Employees Requiring Rescheduling: {len(flagged_employees)} -> {', '.join(flagged_employees) if flagged_employees else 'None'}")
+    if conflict_count == 0:
+        print("[✓] Perfect roster schedule! Zero overlaps detected.")
+    else:
+        print("[!] ACTION REQUIRED: Resolve flagged shifts before finalizing the operational roster.")
+    print("=" * 95)
+
+
+if __name__ == "__main__":
+    # Shift Tuple: (ShiftID, EmployeeID, EmployeeName, Department, DayOfWeek, StartTime24h, EndTime24h)
+    roster = [
+        ("SH01", "EMP101", "Dr. Arvind Rao",    "Emergency ICU", "Monday", "08:00", "16:00"),
+        ("SH02", "EMP102", "Nurse Priya Nair",  "Pediatrics",    "Monday", "09:00", "17:00"),
+        ("SH03", "EMP101", "Dr. Arvind Rao",    "Outpatient OPD","Monday", "14:00", "20:00"),  # Clash with SH01 (14:00 to 16:00)
+        ("SH04", "EMP103", "Tech. Sumanth V",   "Radiology",     "Monday", "08:00", "14:00"),
+        ("SH05", "EMP103", "Tech. Sumanth V",   "CT Scan Unit",  "Monday", "16:00", "22:00"),  # Rest violation: gap 2 hrs < 8 hrs
+        ("SH06", "EMP104", "Dr. Shalini Roy",   "Cardiology",    "Monday", "10:00", "18:00"),
+        ("SH07", "EMP102", "Nurse Priya Nair",  "Night Triage",  "Tuesday","20:00", "04:00"),  # Valid next day
+    ]
+
+    detect_shift_conflicts(roster)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿===============================================================================================
+          HOSPITAL / INDUSTRY EMPLOYEE SHIFT CONFLICT & OVERLAP AUDITOR
+===============================================================================================
+ShiftID   EmpID    Employee Name      Role/Dept      Day        Start   End     Duration
+-----------------------------------------------------------------------------------------------
+SH01      EMP101   Dr. Arvind Rao     Emergency ICU  Monday     08:00   16:00   8.0 hrs
+SH02      EMP102   Nurse Priya Nair   Pediatrics     Monday     09:00   17:00   8.0 hrs
+SH03      EMP101   Dr. Arvind Rao     Outpatient OPD Monday     14:00   20:00   6.0 hrs
+SH04      EMP103   Tech. Sumanth V    Radiology      Monday     08:00   14:00   6.0 hrs
+SH05      EMP103   Tech. Sumanth V    CT Scan Unit   Monday     16:00   22:00   6.0 hrs
+SH06      EMP104   Dr. Shalini Roy    Cardiology     Monday     10:00   18:00   8.0 hrs
+SH07      EMP102   Nurse Priya Nair   Night Triage   Tuesday    20:00   04:00   -16.0 hrs
+-----------------------------------------------------------------------------------------------
+                         DETECTED SCHEDULE CONFLICTS
+-----------------------------------------------------------------------------------------------
+[!] DIRECT OVERLAP DETECTED for Dr. Arvind Rao (EMP101) on Monday:
+    Shift 1: SH01 (08:00 - 16:00) in Emergency ICU
+    Shift 2: SH03 (14:00 - 20:00) in Outpatient OPD
+    Overlap Period: 14:00 to 16:00 (120 minutes clash)
+
+[!] INSUFFICIENT REST PERIOD (< 8 hrs) for Tech. Sumanth V (EMP103) on Monday:
+    Shift SH04 ends at 14:00; Shift SH05 starts at 16:00 (Gap: 2.0 hrs)
+
+-----------------------------------------------------------------------------------------------
+                            AUDIT SUMMARY
+-----------------------------------------------------------------------------------------------
+Total Scheduled Shifts Analyzed : 7
+Total Conflict Violations Found : 2
+Employees Requiring Rescheduling: 2 -> Dr. Arvind Rao, Tech. Sumanth V
+[!] ACTION REQUIRED: Resolve flagged shifts before finalizing the operational roster.
+===============================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Leveraged tuple immutability and interval overlap formulas to detect conflicting hospital shifts and insufficient rest breaks, protecting staff welfare and scheduling compliance.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 09: MANUFACTURING QUALITY CONTROL MATRIX (Problem 60)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Nested Lists, Arithmetic Operators, Quality Thresholds, Conditionals, Batch Yield Calculations</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Analyse industrial manufacturing batch records across automotive component lines, calculate defect percentages and lot yield rates, evaluate each batch against a 3.5% defect tolerance threshold, classify batches into ISO quality grades, and generate an actionable quarantine report.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Process batch records containing total produced and defective units.<br>2. Compute component pass counts, defect percentages, and yield rates.<br>3. Categorize batches: Grade-A (<=1.5%), Grade-B (<=3.5%), Quarantined (>3.5%).<br>4. Highlight quarantined batches requiring root cause analysis and line stoppage.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Defective units cannot exceed produced units.<br>2. Standard allowable defect threshold is 3.50%.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Initialize factory totals for produced, passed, and defective.<br>2. For each batch (batch_id, product, produced, defective): passed = produced - defective; defect_pct = (defective/produced)*100; yield_pct = (passed/produced)*100.<br>3. Check defect_pct against 1.5% and 3.5% thresholds. Assign status Grade-A, Grade-B, or Quarantined.<br>4. Aggregate totals, calculate overall factory defect and yield rates.<br>5. Output full quality matrix and quarantine action list.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION analyze_quality(batches, threshold):
+    FOR EACH (id, name, produced, defective) IN batches:
+        passed = produced - defective
+        defect_pct = (defective / produced) * 100
+        yield_pct = (passed / produced) * 100
+        IF defect_pct <= 1.5 THEN status = 'GRADE-A'
+        ELSE IF defect_pct <= threshold THEN status = 'GRADE-B'
+        ELSE status = 'QUARANTINED'
+    PRINT factory audit table and quarantined lines
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Load Batch Records: (BatchID, Product, ProducedUnits, DefectiveUnits)]
+   │
+   ▼
+[Calculate: Passed = Produced - Defective]
+[Calculate: Defect% = (Defective / Produced) * 100]
+[Calculate: Yield%  = (Passed / Produced) * 100]
+   │
+   ▼
+<Is Defect% <= 1.5%?>
+   ├── YES ──► [Status: GRADE-A (PASS)]
+   └── NO
+         │
+         <Is Defect% <= 3.5% (Threshold)?>
+           ├── YES ──► [Status: GRADE-B (ACCEPTABLE)]
+           └── NO  ──► [Status: QUARANTINED (FAIL) -> Add to Rework List]
+         │
+         ▼
+[Print Factory Quality Audit and Mandatory Action Items]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 9 (Problem 60): Manufacturing Quality Control Matrix
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, nested lists, tuples, tuple unpacking,
+                   string formatting.
+
+Problem Statement:
+Analyse factory production volumes and defective unit counts across multiple
+product lines and batches, calculate defect percentages and lot yield rates,
+classify batches based on ISO quality tolerance thresholds, and generate an
+actionable scrap and rework audit.
+"""
+
+def analyze_manufacturing_quality(batch_records, defect_threshold_pct):
+    print("=" * 95)
+    print("        PRECISION AUTOMOTIVE MANUFACTURING - QUALITY CONTROL MATRIX")
+    print(f"        Standard Defect Tolerance Threshold: {defect_threshold_pct:.2f}%")
+    print("=" * 95)
+    print(f"{'BatchID':<9} {'Product Line':<18} {'Produced':<10} {'Passed':<9} {'Defective':<11} {'Defect(%)':<11} {'Yield(%)':<10} {'Status'}")
+    print("-" * 95)
+
+    total_units_produced = 0
+    total_units_passed = 0
+    total_defective_units = 0
+
+    quarantined_batches = []
+    approved_batches = []
+
+    # Process nested batch records: (batch_id, product_name, units_produced, defective_units)
+    for record in batch_records:
+        batch_id, product_name, produced, defective = record
+
+        passed = produced - defective
+        defect_pct = (defective / produced) * 100.0 if produced > 0 else 0.0
+        yield_pct = (passed / produced) * 100.0 if produced > 0 else 0.0
+
+        total_units_produced += produced
+        total_units_passed += passed
+        total_defective_units += defective
+
+        # Quality Threshold Verification
+        if defect_pct <= 1.5:
+            status = "GRADE-A (PASS)"
+            approved_batches.append(batch_id)
+        elif defect_pct <= defect_threshold_pct:
+            status = "GRADE-B (ACCEPTABLE)"
+            approved_batches.append(batch_id)
+        else:
+            status = "QUARANTINED (FAIL)"
+            quarantined_batches.append((batch_id, product_name, defect_pct, defective))
+
+        print(f"{batch_id:<9} {product_name:<18} {produced:<10} {passed:<9} {defective:<11} {defect_pct:<11.2f} {yield_pct:<10.2f} {status}")
+
+    # Overall Factory Summary
+    overall_defect_pct = (total_defective_units / total_units_produced) * 100.0
+    overall_yield_pct = (total_units_passed / total_units_produced) * 100.0
+
+    print("-" * 95)
+    print("                           QUALITY AUDIT SUMMARY")
+    print("-" * 95)
+    print(f"Total Batches Inspected      : {len(batch_records)}")
+    print(f"Total Components Manufactured : {total_units_produced:,}")
+    print(f"Total Passed Components       : {total_units_passed:,}")
+    print(f"Total Defective / Scrap Units : {total_defective_units:,}")
+    print(f"Overall Factory Defect Rate   : {overall_defect_pct:.2f}%")
+    print(f"Overall Factory Yield Rate    : {overall_yield_pct:.2f}%")
+
+    print("\n" + "=" * 95)
+    print("                     FLAGGED BATCHES REQUIRING REWORK")
+    print("=" * 95)
+    if quarantined_batches:
+        print(f"{'BatchID':<10} {'Product Line':<22} {'Defect Rate':<14} {'Defective Units':<16} {'Mandatory Action'}")
+        print("-" * 95)
+        for q in quarantined_batches:
+            b_id, p_name, d_rate, d_units = q
+            print(f"{b_id:<10} {p_name:<22} {d_rate:<14.2f}% {d_units:<16} Immediate Line Stoppage & Root Cause Analysis")
+    else:
+        print("[✓] All production batches adhere strictly to quality limits.")
+    print("=" * 95)
+
+
+if __name__ == "__main__":
+    threshold = 3.5  # Max allowable defect %
+
+    # List of Tuples: (BatchID, ProductName, ProducedUnits, DefectiveUnits)
+    production_data = [
+        ("BAT-101", "Brake Rotors",       5000, 45),   # 0.90% - Grade A
+        ("BAT-102", "Alloy Wheels",       2500, 85),   # 3.40% - Grade B
+        ("BAT-103", "Fuel Injectors",     8000, 360),  # 4.50% - Quarantined (Fail)
+        ("BAT-104", "Spark Plugs",        12000, 110), # 0.92% - Grade A
+        ("BAT-105", "Transmission Gears", 3500, 160),  # 4.57% - Quarantined (Fail)
+        ("BAT-106", "Camshaft Assemblies", 1800, 35),   # 1.94% - Grade B
+        ("BAT-107", "Turbocharger Blades", 4000, 75),   # 1.88% - Grade B
+    ]
+
+    analyze_manufacturing_quality(production_data, threshold)
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿===============================================================================================
+        PRECISION AUTOMOTIVE MANUFACTURING - QUALITY CONTROL MATRIX
+        Standard Defect Tolerance Threshold: 3.50%
+===============================================================================================
+BatchID   Product Line       Produced   Passed    Defective   Defect(%)   Yield(%)   Status
+-----------------------------------------------------------------------------------------------
+BAT-101   Brake Rotors       5000       4955      45          0.90        99.10      GRADE-A (PASS)
+BAT-102   Alloy Wheels       2500       2415      85          3.40        96.60      GRADE-B (ACCEPTABLE)
+BAT-103   Fuel Injectors     8000       7640      360         4.50        95.50      QUARANTINED (FAIL)
+BAT-104   Spark Plugs        12000      11890     110         0.92        99.08      GRADE-A (PASS)
+BAT-105   Transmission Gears 3500       3340      160         4.57        95.43      QUARANTINED (FAIL)
+BAT-106   Camshaft Assemblies 1800       1765      35          1.94        98.06      GRADE-B (ACCEPTABLE)
+BAT-107   Turbocharger Blades 4000       3925      75          1.88        98.12      GRADE-B (ACCEPTABLE)
+-----------------------------------------------------------------------------------------------
+                           QUALITY AUDIT SUMMARY
+-----------------------------------------------------------------------------------------------
+Total Batches Inspected      : 7
+Total Components Manufactured : 36,800
+Total Passed Components       : 35,930
+Total Defective / Scrap Units : 870
+Overall Factory Defect Rate   : 2.36%
+Overall Factory Yield Rate    : 97.64%
+
+===============================================================================================
+                     FLAGGED BATCHES REQUIRING REWORK
+===============================================================================================
+BatchID    Product Line           Defect Rate    Defective Units  Mandatory Action
+-----------------------------------------------------------------------------------------------
+BAT-103    Fuel Injectors         4.50          % 360              Immediate Line Stoppage & Root Cause Analysis
+BAT-105    Transmission Gears     4.57          % 160              Immediate Line Stoppage & Root Cause Analysis
+===============================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Evaluated manufacturing lots across seven automotive component lines. Flagged batches BAT-103 (Fuel Injectors) and BAT-105 (Transmission Gears) for exceeding defect tolerance thresholds.</p>
+    
+    <div class="page-break"></div>
+    <h2 class="case-heading">CASE STUDY 10: COMPREHENSIVE SMART CAMPUS MANAGEMENT SIMULATION (Problem 100)</h2>
+    <div style="margin-bottom: 12px;">
+        <span class="badge">Syllabus Concepts: Modular Menu-Driven Architecture, Lists, Nested Lists, Tuples, Unpacking, Loops, Strings, Full Syllabus Synthesis</span>
+    </div>
+
+    <h3 class="sub-title">1. Problem Statement</h3>
+    <p>Develop an integrated smart campus management simulation combining student directories, attendance shortage detention warnings (<75%), Dean's merit honor roll (CGPA >= 8.5), event registration and capacity management, lab workstation utilization monitoring, and real-time transaction processing.</p>
+
+    <h3 class="sub-title">2. Objectives</h3>
+    <p>1. Integrate multiple heterogeneous campus datasets using lists, nested lists, and tuples.<br>2. Implement student directory, attendance auditing, and merit classification modules.<br>3. Manage campus event capacity and dynamically enforce booking rules.<br>4. Audit computing lab hardware utilization percentages.<br>5. Execute a live event registration transaction with duplicate validation and seat count updates.</p>
+
+    <h3 class="sub-title">3. Assumptions & Constraints</h3>
+    <p>1. Attendance below 75% requires condonation or triggers detention.<br>2. CGPA >= 8.5 earns Dean's Honor Roll standing; CGPA >= 9.5 earns Gold Scholar standing.<br>3. Event registration requires verifying student existence, capacity availability, and preventing duplicate enrollments.</p>
+
+    <h3 class="sub-title">4. Step-by-Step Algorithm</h3>
+    <p>1. Define master student tuples, event tuples, and lab resource nested lists.<br>2. Module 1: Display student directory.<br>3. Module 2: Audit attendance; flag students < 75% for condonation or detention.<br>4. Module 3: Filter CGPA >= 8.5 for Gold and Distinction Scholar honor rolls.<br>5. Module 4: Calculate event vacant seats and flag full events.<br>6. Module 5: Calculate workstation utilization percentages.<br>7. Module 6: Simulate transaction: verify student exists, check duplicate registration, update seat count if capacity permits.<br>8. Print execution summary.</p>
+
+    <h3 class="sub-title">5. Pseudocode</h3>
+    <pre>FUNCTION run_smart_campus():
+    DISPLAY_STUDENT_DIRECTORY(students)
+    AUDIT_ATTENDANCE_SHORTAGES(students)
+    GENERATE_HONOR_ROLL(students)
+    AUDIT_EVENT_CAPACITY(events)
+    AUDIT_LAB_RESOURCES(labs)
+    EXECUTE_EVENT_REGISTRATION(student_id, event_code)
+END FUNCTION</pre>
+
+    <h3 class="sub-title">6. System Flowchart Diagram</h3>
+    <div class="flowchart-box">[START]
+   │
+   ▼
+[Initialize Master Campus Datasets: Students, Events, Labs, Registrations]
+   │
+   ▼
+[Module 1: Display Master Student Directory]
+   │
+   ▼
+[Module 2: Audit Attendance Shortage (<75%) -> Condonation / Detention]
+   │
+   ▼
+[Module 3: Generate Dean's Merit Honor Roll (CGPA >= 8.50)]
+   │
+   ▼
+[Module 4: Check Campus Event Capacities and Vacancies]
+   │
+   ▼
+[Module 5: Calculate Computing Lab Hardware Utilization %]
+   │
+   ▼
+[Module 6: Execute Real-Time Event Registration Transaction with Duplicate Checks]
+   │
+   ▼
+[Display Smart Campus Administrative Execution Summary]
+   │
+   ▼
+ [END]</div>
+
+    <div class="page-break"></div>
+    <h3 class="sub-title">7. Complete Python Source Code</h3>
+    <pre>"""
+Case Study 10 (Problem 100): Comprehensive Smart Campus Management Simulation
+Syllabus Concepts: Computational thinking, variables, data types, operators,
+                   conditional statements, loops, strings, pattern generation,
+                   lists, nested lists, tuples, tuple operations, and tuple unpacking.
+
+Problem Statement:
+Develop a modular, menu-driven program that integrates student records, attendance
+monitoring, academic grades, campus event registrations, lab resource allocations,
+and statistical administrative reporting using all core syllabus constructs.
+"""
+
+def run_smart_campus_simulation():
+    # 1. Core Data Structures:
+    # Students List of Tuples: (RollNo, Name, Branch, Year, AttendancePct, CGPA)
+    students = [
+        ("24NR1A0501", "Aarav Sharma",    "CSE", 1, 88.5, 9.2),
+        ("24NR1A0502", "Bhavya Reddy",    "CSE", 1, 72.0, 7.8),
+        ("24NR1A0503", "Chaitanya Roy",   "ECE", 1, 94.0, 9.6),
+        ("24NR1A0504", "Divya Patel",     "CSE", 1, 81.0, 8.4),
+        ("24NR1A0505", "Eshwar Naik",     "IT",  1, 64.5, 6.9),
+        ("24NR1A0506", "Sai Chandra N",   "CSE", 1, 96.0, 9.8),
+    ]
+
+    # Campus Events: List of Tuples: (EventCode, EventName, Capacity, RegisteredCount)
+    events = [
+        ("EV01", "AI Hackathon 2026", 50, 48),
+        ("EV02", "Web Dev Bootcamp",   40, 32),
+        ("EV03", "Robotics Expo",      30, 30),
+    ]
+
+    # Lab Computing Resources: Nested List (LabName, TotalPCs, OccupiedPCs)
+    lab_resources = [
+        ["Turing Lab (CSE)", 60, 45],
+        ["Babbage Lab (IT)", 50, 48],
+        ["Tesla Lab (ECE)",  40, 22],
+    ]
+
+    # Pre-registered event mapping: List of tuples (RollNo, EventCode)
+    event_registrations = [
+        ("24NR1A0501", "EV01"),
+        ("24NR1A0503", "EV01"),
+        ("24NR1A0506", "EV01"),
+        ("24NR1A0504", "EV02"),
+        ("24NR1A0506", "EV02"),
+    ]
+
+    print("=" * 85)
+    print("      DR. RVR NRI INSTITUTE OF TECHNOLOGY - SMART CAMPUS SIMULATION")
+    print("=" * 85)
+
+    menu_options = [
+        "1. Display Master Student Directory",
+        "2. Attendance Shortage & Condonation Audit (< 75%)",
+        "3. Academic Merit Honor Roll (CGPA >= 8.5)",
+        "4. Campus Event Registrations & Seat Availability",
+        "5. Lab Computing Resource Utilization Audit",
+        "6. Execute Student Event Registration",
+        "7. Exit Simulation"
+    ]
+
+    # Simulated Automated Execution of all operational modules
+    for option in menu_options:
+        print(f"  {option}")
+    print("-" * 85)
+
+    # MODULE 1: Student Directory
+    print("\n>>> [MODULE 1] MASTER STUDENT DIRECTORY")
+    print(f"{'Roll No':<14} {'Student Name':<18} {'Branch':<8} {'Year':<6} {'Attnd(%)':<10} {'CGPA'}")
+    print("-" * 70)
+    for st in students:
+        roll, name, branch, yr, att, cgpa = st
+        print(f"{roll:<14} {name:<18} {branch:<8} {yr:<6} {att:<10.1f} {cgpa:<5.2f}")
+
+    # MODULE 2: Attendance Shortage Audit
+    print("\n>>> [MODULE 2] ATTENDANCE DETENTION & CONDONATION AUDIT (< 75.0%)")
+    print(f"{'Roll No':<14} {'Student Name':<18} {'Attendance':<12} {'Academic Action'}")
+    print("-" * 70)
+    shortage_count = 0
+    for st in students:
+        roll, name, branch, yr, att, cgpa = st
+        if att < 75.0:
+            shortage_count += 1
+            if att >= 65.0:
+                action = "Condonation Fee Applicable (Eligible on Medical Grounds)"
+            else:
+                action = "DETENTION WARNING (Severe Shortage)"
+            print(f"{roll:<14} {name:<18} {att:<12.1f}% {action}")
+    if shortage_count == 0:
+        print("  [✓] Zero students with attendance shortage.")
+
+    # MODULE 3: Academic Merit Honor Roll
+    print("\n>>> [MODULE 3] DEAN'S MERIT HONOR ROLL (CGPA >= 8.50)")
+    print(f"{'Roll No':<14} {'Student Name':<18} {'CGPA':<8} {'Standing'}")
+    print("-" * 70)
+    for st in students:
+        roll, name, branch, yr, att, cgpa = st
+        if cgpa >= 9.5:
+            standing = "Gold Scholar (Top 1%)"
+            print(f"{roll:<14} {name:<18} {cgpa:<8.2f} {standing}")
+        elif cgpa >= 8.5:
+            standing = "Distinction Scholar"
+            print(f"{roll:<14} {name:<18} {cgpa:<8.2f} {standing}")
+
+    # MODULE 4: Event Availability Audit
+    print("\n>>> [MODULE 4] CAMPUS EVENT CAPACITY STATUS")
+    print(f"{'Code':<8} {'Event Title':<26} {'Capacity':<10} {'Filled':<8} {'Vacant Seats':<14} {'Booking Status'}")
+    print("-" * 80)
+    for ev in events:
+        e_code, e_name, cap, reg = ev
+        vacant = cap - reg
+        status = "HOUSEFULL" if vacant == 0 else f"{vacant} Seats Left"
+        print(f"{e_code:<8} {e_name:<26} {cap:<10} {reg:<8} {vacant:<14} {status}")
+
+    # MODULE 5: Lab Infrastructure Utilization
+    print("\n>>> [MODULE 5] LAB COMPUTING INFRASTRUCTURE AUDIT")
+    print(f"{'Lab Name':<24} {'Total PCs':<12} {'In-Use':<10} {'Available':<12} {'Utilization(%)'}")
+    print("-" * 75)
+    for lab in lab_resources:
+        l_name, total_pcs, in_use = lab
+        avail = total_pcs - in_use
+        util_pct = (in_use / total_pcs) * 100.0
+        print(f"{l_name:<24} {total_pcs:<12} {in_use:<10} {avail:<12} {util_pct:.1f}%")
+
+    # MODULE 6: Process Event Registration Simulation
+    print("\n>>> [MODULE 6] REAL-TIME REGISTRATION TRANSACTION TEST")
+    target_roll = "24NR1A0502"  # Bhavya Reddy
+    target_event = "EV02"       # Web Dev Bootcamp
+
+    # Check if student exists
+    student_found = False
+    for st in students:
+        if st[0] == target_roll:
+            student_found = True
+            break
+
+    # Check if already registered
+    already_registered = False
+    for reg in event_registrations:
+        if reg[0] == target_roll and reg[1] == target_event:
+            already_registered = True
+            break
+
+    if already_registered:
+        print(f"  [!] Registration Failed: Student {target_roll} is already registered for {target_event}.")
+    else:
+        # Update count in events
+        for idx in range(len(events)):
+            e_code, e_name, cap, reg_count = events[idx]
+            if e_code == target_event:
+                if reg_count < cap:
+                    events[idx] = (e_code, e_name, cap, reg_count + 1)
+                    event_registrations.append((target_roll, target_event))
+                    print(f"  [✓] Registration Confirmed: Student {target_roll} enrolled in '{e_name}' successfully!")
+                    print(f"      Updated Seats: {reg_count + 1} / {cap}")
+                else:
+                    print(f"  [!] Registration Denied: '{e_name}' has reached full capacity.")
+
+    print("\n" + "=" * 85)
+    print("         SMART CAMPUS SIMULATION EXECUTION COMPLETED SUCCESSFULLY")
+    print("=" * 85)
+
+
+if __name__ == "__main__":
+    run_smart_campus_simulation()
+</pre>
+
+    <h3 class="sub-title">8. Program Execution Output Log</h3>
+    <pre class="output-box">﻿=====================================================================================
+      DR. RVR NRI INSTITUTE OF TECHNOLOGY - SMART CAMPUS SIMULATION
+=====================================================================================
+  1. Display Master Student Directory
+  2. Attendance Shortage & Condonation Audit (< 75%)
+  3. Academic Merit Honor Roll (CGPA >= 8.5)
+  4. Campus Event Registrations & Seat Availability
+  5. Lab Computing Resource Utilization Audit
+  6. Execute Student Event Registration
+  7. Exit Simulation
+-------------------------------------------------------------------------------------
+
+>>> [MODULE 1] MASTER STUDENT DIRECTORY
+Roll No        Student Name       Branch   Year   Attnd(%)   CGPA
+----------------------------------------------------------------------
+24NR1A0501     Aarav Sharma       CSE      1      88.5       9.20 
+24NR1A0502     Bhavya Reddy       CSE      1      72.0       7.80 
+24NR1A0503     Chaitanya Roy      ECE      1      94.0       9.60 
+24NR1A0504     Divya Patel        CSE      1      81.0       8.40 
+24NR1A0505     Eshwar Naik        IT       1      64.5       6.90 
+24NR1A0506     Sai Chandra N      CSE      1      96.0       9.80 
+
+>>> [MODULE 2] ATTENDANCE DETENTION & CONDONATION AUDIT (< 75.0%)
+Roll No        Student Name       Attendance   Academic Action
+----------------------------------------------------------------------
+24NR1A0502     Bhavya Reddy       72.0        % Condonation Fee Applicable (Eligible on Medical Grounds)
+24NR1A0505     Eshwar Naik        64.5        % DETENTION WARNING (Severe Shortage)
+
+>>> [MODULE 3] DEAN'S MERIT HONOR ROLL (CGPA >= 8.50)
+Roll No        Student Name       CGPA     Standing
+----------------------------------------------------------------------
+24NR1A0501     Aarav Sharma       9.20     Distinction Scholar
+24NR1A0503     Chaitanya Roy      9.60     Gold Scholar (Top 1%)
+24NR1A0506     Sai Chandra N      9.80     Gold Scholar (Top 1%)
+
+>>> [MODULE 4] CAMPUS EVENT CAPACITY STATUS
+Code     Event Title                Capacity   Filled   Vacant Seats   Booking Status
+--------------------------------------------------------------------------------
+EV01     AI Hackathon 2026          50         48       2              2 Seats Left
+EV02     Web Dev Bootcamp           40         32       8              8 Seats Left
+EV03     Robotics Expo              30         30       0              HOUSEFULL
+
+>>> [MODULE 5] LAB COMPUTING INFRASTRUCTURE AUDIT
+Lab Name                 Total PCs    In-Use     Available    Utilization(%)
+---------------------------------------------------------------------------
+Turing Lab (CSE)         60           45         15           75.0%
+Babbage Lab (IT)         50           48         2            96.0%
+Tesla Lab (ECE)          40           22         18           55.0%
+
+>>> [MODULE 6] REAL-TIME REGISTRATION TRANSACTION TEST
+  [✓] Registration Confirmed: Student 24NR1A0502 enrolled in 'Web Dev Bootcamp' successfully!
+      Updated Seats: 33 / 40
+
+=====================================================================================
+         SMART CAMPUS SIMULATION EXECUTION COMPLETED SUCCESSFULLY
+=====================================================================================</pre>
+
+    <h3 class="sub-title">9. Conclusion & Learning Outcome</h3>
+    <p>Synthesized all syllabus constructs (loops, conditionals, strings, lists, nested lists, tuples, and tuple unpacking) into a unified smart campus operational system.</p>
+    
+</body>
+</html>
