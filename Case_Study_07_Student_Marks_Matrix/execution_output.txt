@@ -1,0 +1,23 @@
+﻿==========================================================================================
+             ACADEMIC PERFORMANCE MATRIX & BATCH STATISTICAL AUDIT
+==========================================================================================
+Roll/Name         Maths     Physics   Python    DataStructDigitalLogicTotal    Average   Grade  Status
+------------------------------------------------------------------------------------------
+Aarav Sharma      92.0      85.0      96.0      90.0      88.0      451.0    90.20     A+     PASSED
+Bhavya Reddy      78.0      68.0      82.0      74.0      70.0      372.0    74.40     B      PASSED
+Chaitanya Roy     95.0      91.0      98.0      94.0      92.0      470.0    94.00     A+     PASSED
+Divya Patel       64.0      58.0      72.0      65.0      60.0      319.0    63.80     C      PASSED
+Eshwar Naik       88.0      72.0      85.0      36.0      68.0      349.0    69.80     F      BACKLOG
+Fatima Zahra      90.0      82.0      94.0      89.0      86.0      441.0    88.20     A      PASSED
+Gautam Verma      52.0      48.0      60.0      42.0      55.0      257.0    51.40     D      PASSED
+------------------------------------------------------------------------------------------
+Subject Average   79.86     72.00     83.86     70.00     74.14     
+Highest Mark      95.0      91.0      98.0      94.0      92.0      
+Lowest Mark       52.0      48.0      60.0      36.0      55.0      
+==========================================================================================
+                        EXECUTIVE INSIGHTS & RANKINGS
+==========================================================================================
+★ Batch Topper: Chaitanya Roy with an aggregate average of 94.00%
+[!] Critical Subject Detected: DataStruct has the lowest average (70.00%) with 1 failing student(s).
+    Recommendation: Remedial classes and tutorial sessions advised for DataStruct.
+==========================================================================================
