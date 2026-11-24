@@ -1,0 +1,33 @@
+﻿===============================================================================================
+       METROPOLITAN UNIVERSITY - ADMISSION ALLOCATION ENGINE
+       Target Department: B.Tech Computer Science & Engineering | Sanctioned Seat Capacity: 4
+===============================================================================================
+AppID   Name             Entrance%   Maths   Physics  CS/Chem  12th Agg  Status
+-----------------------------------------------------------------------------------------------
+ADM101  Kavya Sree       98.45       96.0    92.0     95.0     94.2      ELIGIBLE
+ADM102  Rohan Mehta      94.10       88.0    78.0     82.0     86.5      ELIGIBLE
+ADM103  Ananya Sharma    96.50       91.0    85.0     90.0     92.0      ELIGIBLE
+ADM104  Girish Varma     96.50       94.0    81.0     88.0     90.5      ELIGIBLE
+ADM105  Tanvi Joshi      82.00       90.0    80.0     85.0     88.0      NOT ELIGIBLE (Low Entrance)
+ADM106  Siddharth Rao    91.20       72.0    80.0     84.0     81.0      NOT ELIGIBLE (Low Maths)
+ADM107  Meera Nambiar    95.20       89.0    84.0     87.0     89.4      ELIGIBLE
+ADM108  Pranav Chandra   94.10       88.0    82.0     80.0     88.0      ELIGIBLE
+ADM109  Zoya Khan        89.75       82.0    60.0     78.0     79.5      NOT ELIGIBLE (Low Physics)
+
+===============================================================================================
+                     FINAL MERIT ALLOTMENT & WAITING LIST
+===============================================================================================
+Merit  AppID   Name             Entrance%   Maths   Physics  12th Agg  Allotment Result
+-----------------------------------------------------------------------------------------------
+1      ADM101  Kavya Sree       98.45       96.0    92.0     94.2      CONFIRMED SEAT (Seat #1)
+2      ADM104  Girish Varma     96.50       94.0    81.0     90.5      CONFIRMED SEAT (Seat #2)
+3      ADM103  Ananya Sharma    96.50       91.0    85.0     92.0      CONFIRMED SEAT (Seat #3)
+4      ADM107  Meera Nambiar    95.20       89.0    84.0     89.4      CONFIRMED SEAT (Seat #4)
+5      ADM108  Pranav Chandra   94.10       88.0    82.0     88.0      WAITLISTED (WL-1)
+6      ADM102  Rohan Mehta      94.10       88.0    78.0     86.5      WAITLISTED (WL-2)
+-----------------------------------------------------------------------------------------------
+Total Applicants Processed : 9
+Eligible Applicants Found  : 6
+Confirmed Seats Allocated  : 4 / 4
+Candidates on Waitlist     : 2
+===============================================================================================
