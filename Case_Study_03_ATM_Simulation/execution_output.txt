@@ -1,0 +1,28 @@
+﻿=====================================================================================
+      APEX BANK ATM TRANSACTION SIMULATOR - ACCOUNT AUDIT LOG
+      Account No: SB-98421045 | Account Holder: Sai Chandra Nerella
+=====================================================================================
+Opening Balance: ₹35,000.00
+-------------------------------------------------------------------------------------
+TxnID    Type         Requested(₹)   Status     Running Balance(₹)   Remarks
+-------------------------------------------------------------------------------------
+TX1001   DEPOSIT      15,000.00      SUCCESS    50,000.00            Credited ₹15,000.00
+TX1002   WITHDRAWAL   10,000.00      SUCCESS    40,000.00            Debited ₹10,000.00
+TX1003   WITHDRAWAL   25,000.00      REJECTED   40,000.00            Exceeds single limit (₹20,000)
+TX1004   WITHDRAWAL   18,000.00      SUCCESS    22,000.00            Debited ₹18,000.00
+TX1005   DEPOSIT      -500.00        REJECTED   22,000.00            Invalid amount (<= 0)
+TX1006   WITHDRAWAL   15,000.00      SUCCESS    7,000.00             Debited ₹15,000.00
+TX1007   WITHDRAWAL   6,000.00       REJECTED   7,000.00             Breaches Min Balance (₹2,000)
+TX1008   WITHDRAWAL   4,000.00       SUCCESS    3,000.00             Debited ₹4,000.00
+TX1009   WITHDRAWAL   5,000.00       REJECTED   3,000.00             Exceeds daily cap (₹50,000)
+TX1010   DEPOSIT      20,000.00      SUCCESS    23,000.00            Credited ₹20,000.00
+-------------------------------------------------------------------------------------
+                           TRANSACTION SUMMARY REPORT
+-------------------------------------------------------------------------------------
+Total Transactions Processed : 10
+Successful Transactions       : 6
+Rejected / Failed Transactions: 4
+Total Withdrawn Today         : ₹47,000.00 / ₹50,000.00
+Closing Account Balance       : ₹23,000.00
+Net Account Change            : -₹12,000.00 (Net Outflow)
+=====================================================================================
