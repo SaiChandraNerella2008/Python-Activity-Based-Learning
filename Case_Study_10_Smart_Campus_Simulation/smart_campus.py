@@ -19,7 +19,7 @@ def run_smart_campus_simulation():
         ("24NR1A0503", "Chaitanya Roy",   "ECE", 1, 94.0, 9.6),
         ("24NR1A0504", "Divya Patel",     "CSE", 1, 81.0, 8.4),
         ("24NR1A0505", "Eshwar Naik",     "IT",  1, 64.5, 6.9),
-        ("24NR1A0506", "Sai Chandra N",   "CSE", 1, 96.0, 9.8),
+        ("26000654", "Sai Chandra N",   "CSE", 1, 96.0, 9.8),
     ]
 
     # Campus Events: List of Tuples: (EventCode, EventName, Capacity, RegisteredCount)
@@ -40,9 +40,9 @@ def run_smart_campus_simulation():
     event_registrations = [
         ("24NR1A0501", "EV01"),
         ("24NR1A0503", "EV01"),
-        ("24NR1A0506", "EV01"),
+        ("26000654",   "EV01"),
         ("24NR1A0504", "EV02"),
-        ("24NR1A0506", "EV02"),
+        ("26000654",   "EV02"),
     ]
 
     print("=" * 85)

@@ -1,8 +1,8 @@
-# Case Study 08: Tuple-Based Employee Shift Conflict Detection (Problem 48)
+﻿# Case Study 08: Tuple-Based Employee Shift Conflict Detection (Problem 48)
 
 > **Course**: Python Programming - Activity-Based Learning (ABL) Assignment  
 > **Institution**: Dr. RVR NRI Institute of Technology (Deemed to be University)  
-> **Student Name**: Sai Chandra Nerella | **Roll No**: 24NR1A0506 | **Branch**: CSE (I B.Tech)
+> **Student Name**: Sai Chandra Nerella | **NRI ID**: 26000654 | **Section**: Section 3 | **Branch**: CSE (I B.Tech)
 
 ---
 

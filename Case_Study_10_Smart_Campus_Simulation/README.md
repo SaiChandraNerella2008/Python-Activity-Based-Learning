@@ -1,8 +1,8 @@
-# Case Study 10: Comprehensive Smart Campus Management Simulation (Problem 100)
+﻿# Case Study 10: Comprehensive Smart Campus Management Simulation (Problem 100)
 
 > **Course**: Python Programming - Activity-Based Learning (ABL) Assignment  
 > **Institution**: Dr. RVR NRI Institute of Technology (Deemed to be University)  
-> **Student Name**: Sai Chandra Nerella | **Roll No**: 24NR1A0506 | **Branch**: CSE (I B.Tech)
+> **Student Name**: Sai Chandra Nerella | **NRI ID**: 26000654 | **Section**: Section 3 | **Branch**: CSE (I B.Tech)
 
 ---
 
@@ -110,7 +110,7 @@ def run_smart_campus_simulation():
         ("24NR1A0503", "Chaitanya Roy",   "ECE", 1, 94.0, 9.6),
         ("24NR1A0504", "Divya Patel",     "CSE", 1, 81.0, 8.4),
         ("24NR1A0505", "Eshwar Naik",     "IT",  1, 64.5, 6.9),
-        ("24NR1A0506", "Sai Chandra N",   "CSE", 1, 96.0, 9.8),
+        ("26000654", "Sai Chandra N",   "CSE", 1, 96.0, 9.8),
     ]
 
     # Campus Events: List of Tuples: (EventCode, EventName, Capacity, RegisteredCount)
@@ -131,9 +131,9 @@ def run_smart_campus_simulation():
     event_registrations = [
         ("24NR1A0501", "EV01"),
         ("24NR1A0503", "EV01"),
-        ("24NR1A0506", "EV01"),
+        ("26000654", "EV01"),
         ("24NR1A0504", "EV02"),
-        ("24NR1A0506", "EV02"),
+        ("26000654", "EV02"),
     ]
 
     print("=" * 85)
@@ -281,7 +281,7 @@ Roll No        Student Name       Branch   Year   Attnd(%)   CGPA
 24NR1A0503     Chaitanya Roy      ECE      1      94.0       9.60 
 24NR1A0504     Divya Patel        CSE      1      81.0       8.40 
 24NR1A0505     Eshwar Naik        IT       1      64.5       6.90 
-24NR1A0506     Sai Chandra N      CSE      1      96.0       9.80 
+26000654     Sai Chandra N      CSE      1      96.0       9.80 
 
 >>> [MODULE 2] ATTENDANCE DETENTION & CONDONATION AUDIT (< 75.0%)
 Roll No        Student Name       Attendance   Academic Action
@@ -294,7 +294,7 @@ Roll No        Student Name       CGPA     Standing
 ----------------------------------------------------------------------
 24NR1A0501     Aarav Sharma       9.20     Distinction Scholar
 24NR1A0503     Chaitanya Roy      9.60     Gold Scholar (Top 1%)
-24NR1A0506     Sai Chandra N      9.80     Gold Scholar (Top 1%)
+26000654     Sai Chandra N      9.80     Gold Scholar (Top 1%)
 
 >>> [MODULE 4] CAMPUS EVENT CAPACITY STATUS
 Code     Event Title                Capacity   Filled   Vacant Seats   Booking Status

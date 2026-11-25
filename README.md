@@ -17,9 +17,9 @@
 * **School**: School of Computer Studies
 * **Department**: Department of Computer Science & Engineering (CSE)
 * **Student Name**: **Sai Chandra Nerella**
-* **Roll Number**: **24NR1A0506**
+* **NRI ID**: **26000654**
 * **Degree & Branch**: B.Tech — Computer Science & Engineering (CSE)
-* **Year & Section**: I B.Tech — Section A
+* **Year & Section**: I B.Tech — Section 3
 * **Assignment Title**: Python Programming – Activity-Based Learning (ABL) Assignment (Dussehra Holidays Project)
 * **Faculty / Mentor**: Faculty of Python Programming, Department of CSE
 
